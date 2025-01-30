@@ -17,10 +17,12 @@ import model.statement.IfStmt;
 import model.statement.VarDeclStmt;
 import model.statement.WhileStmt;
 import model.statement.NewStmt;
+import model.statement.NoOPStmt;
 import model.statement.WriteHeapStmt;
 import model.statement.ForkStmt;
 import model.statement.OpenRFile;
 import model.statement.ReadFile;
+import model.statement.RepeatUntilStmt;
 import model.statement.CloseRFile;
 import model.exp.VariableExp;
 import model.exp.ArithExp;
@@ -69,13 +71,19 @@ public class ProgramListController {
                         new VarDeclStmt("b", new IntType()),
                         new CompStmt(
                                 new AssignStmt("a",
-                                        new ArithExp('+', new ConstantValue(new IntValue(2)),
-                                                new ArithExp('*', new ConstantValue(new IntValue(3)),
-                                                        new ConstantValue(new IntValue(5))))),
+                                        new ArithExp('+', new ConstantValue(
+                                                new IntValue(2)),
+                                                new ArithExp('*',
+                                                        new ConstantValue(
+                                                                new IntValue(3)),
+                                                        new ConstantValue(
+                                                                new IntValue(5))))),
                                 new CompStmt(
                                         new AssignStmt("b",
-                                                new ArithExp('+', new VariableExp("a"),
-                                                        new ConstantValue(new IntValue(1)))),
+                                                new ArithExp('+',
+                                                        new VariableExp("a"),
+                                                        new ConstantValue(
+                                                                new IntValue(1)))),
                                         new PrintStmt(new VariableExp("b"))))));
         programs.add(prog2);
 
@@ -85,11 +93,16 @@ public class ProgramListController {
                 new CompStmt(
                         new VarDeclStmt("v", new IntType()),
                         new CompStmt(
-                                new AssignStmt("a", new ConstantValue(new BoolValue(true))),
+                                new AssignStmt("a",
+                                        new ConstantValue(new BoolValue(true))),
                                 new CompStmt(
                                         new IfStmt(new VariableExp("a"),
-                                                new AssignStmt("v", new ConstantValue(new IntValue(2))),
-                                                new AssignStmt("v", new ConstantValue(new IntValue(3)))),
+                                                new AssignStmt("v",
+                                                        new ConstantValue(
+                                                                new IntValue(2))),
+                                                new AssignStmt("v",
+                                                        new ConstantValue(
+                                                                new IntValue(3)))),
                                         new PrintStmt(new VariableExp("v"))))));
         programs.add(prog3);
 
@@ -121,12 +134,16 @@ public class ProgramListController {
                 new CompStmt(
                         new NewStmt("v", new ConstantValue(new IntValue(20))),
                         new CompStmt(
-                                new VarDeclStmt("a", new RefType(new RefType(new IntType()))),
+                                new VarDeclStmt("a",
+                                        new RefType(new RefType(
+                                                new IntType()))),
                                 new CompStmt(
                                         new NewStmt("a", new VariableExp("v")),
                                         new CompStmt(
-                                                new PrintStmt(new VariableExp("v")),
-                                                new PrintStmt(new VariableExp("a")))))));
+                                                new PrintStmt(new VariableExp(
+                                                        "v")),
+                                                new PrintStmt(new VariableExp(
+                                                        "a")))))));
         programs.add(prog5);
 
         // Example 6: Ref int v;new(v,20);print(rH(v)); wH(v,30);print(rH(v)+5);
@@ -137,10 +154,15 @@ public class ProgramListController {
                         new CompStmt(
                                 new PrintStmt(new RefExp(new VariableExp("v"))),
                                 new CompStmt(
-                                        new WriteHeapStmt("v", new ConstantValue(new IntValue(30))),
+                                        new WriteHeapStmt("v",
+                                                new ConstantValue(
+                                                        new IntValue(30))),
                                         new PrintStmt(
-                                                new ArithExp('+', new RefExp(new VariableExp("v")),
-                                                        new ConstantValue(new IntValue(5))))))));
+                                                new ArithExp('+',
+                                                        new RefExp(new VariableExp(
+                                                                "v")),
+                                                        new ConstantValue(
+                                                                new IntValue(5))))))));
         programs.add(prog6);
 
         // Example 7: Ref int v;new(v,20);Ref Ref int a; new(a,v);
@@ -150,12 +172,17 @@ public class ProgramListController {
                 new CompStmt(
                         new NewStmt("v", new ConstantValue(new IntValue(20))),
                         new CompStmt(
-                                new VarDeclStmt("a", new RefType(new RefType(new IntType()))),
+                                new VarDeclStmt("a",
+                                        new RefType(new RefType(
+                                                new IntType()))),
                                 new CompStmt(
                                         new NewStmt("a", new VariableExp("v")),
                                         new CompStmt(
-                                                new NewStmt("v", new ConstantValue(new IntValue(30))),
-                                                new PrintStmt(new RefExp(new RefExp(new VariableExp("a")))))))));
+                                                new NewStmt("v", new ConstantValue(
+                                                        new IntValue(30))),
+                                                new PrintStmt(new RefExp(
+                                                        new RefExp(new VariableExp(
+                                                                "a")))))))));
         programs.add(prog7);
 
         // Example 9: int v; v=4; (while (v>0) print(v);v=v-1);print(v)
@@ -165,12 +192,18 @@ public class ProgramListController {
                         new AssignStmt("v", new ConstantValue(new IntValue(4))),
                         new CompStmt(
                                 new WhileStmt(
-                                        new RelExp(new VariableExp("v"), new ConstantValue(new IntValue(0)), ">"),
+                                        new RelExp(new VariableExp("v"),
+                                                new ConstantValue(
+                                                        new IntValue(0)),
+                                                ">"),
                                         new CompStmt(
-                                                new PrintStmt(new VariableExp("v")),
+                                                new PrintStmt(new VariableExp(
+                                                        "v")),
                                                 new AssignStmt("v",
-                                                        new ArithExp('-', new VariableExp("v"),
-                                                                new ConstantValue(new IntValue(1)))))),
+                                                        new ArithExp('-',
+                                                                new VariableExp("v"),
+                                                                new ConstantValue(
+                                                                        new IntValue(1)))))),
                                 new PrintStmt(new VariableExp("v")))));
         programs.add(prog9);
 
@@ -182,25 +215,82 @@ public class ProgramListController {
                 new CompStmt(
                         new VarDeclStmt("a", new RefType(new IntType())),
                         new CompStmt(
-                                new AssignStmt("v", new ConstantValue(new IntValue(10))),
+                                new AssignStmt("v",
+                                        new ConstantValue(new IntValue(10))),
                                 new CompStmt(
-                                        new NewStmt("a", new ConstantValue(new IntValue(22))),
+                                        new NewStmt("a", new ConstantValue(
+                                                new IntValue(22))),
                                         new CompStmt(
                                                 new ForkStmt(
                                                         new CompStmt(
-                                                                new WriteHeapStmt("a",
-                                                                        new ConstantValue(new IntValue(30))),
+                                                                new WriteHeapStmt(
+                                                                        "a",
+                                                                        new ConstantValue(
+                                                                                new IntValue(30))),
                                                                 new CompStmt(
                                                                         new AssignStmt("v",
-                                                                                new ConstantValue(new IntValue(32))),
+                                                                                new ConstantValue(
+                                                                                        new IntValue(32))),
                                                                         new CompStmt(
-                                                                                new PrintStmt(new VariableExp("v")),
+                                                                                new PrintStmt(new VariableExp(
+                                                                                        "v")),
                                                                                 new PrintStmt(new RefExp(
                                                                                         new VariableExp("a"))))))),
                                                 new CompStmt(
-                                                        new PrintStmt(new VariableExp("v")),
-                                                        new PrintStmt(new RefExp(new VariableExp("a")))))))));
+                                                        new PrintStmt(new VariableExp(
+                                                                "v")),
+                                                        new PrintStmt(new RefExp(
+                                                                new VariableExp("a")))))))));
         programs.add(prog10);
+
+        // int v; int x; int y; v=0;
+        // (repeat (fork(print(v);v=v-1);v=v+1) until v==3);
+        // x=1;nop;y=3;nop;
+        // print(v*10)
+        IStmt prog11 = new CompStmt(
+                new VarDeclStmt("v", new IntType()),
+                new CompStmt(
+                        new VarDeclStmt("x", new IntType()),
+                        new CompStmt(
+                                new VarDeclStmt("y", new IntType()),
+                                new CompStmt(
+                                        new AssignStmt("v", new ConstantValue(new IntValue(0))),
+                                        new CompStmt(
+                                                new RepeatUntilStmt(
+                                                        new RelExp(new VariableExp("v"),
+                                                                new ConstantValue(new IntValue(3)), "=="),
+                                                        new CompStmt(
+                                                                new ForkStmt(
+                                                                        new CompStmt(
+                                                                                new PrintStmt(new VariableExp("v")),
+                                                                                new AssignStmt("v",
+                                                                                        new ArithExp('-',
+                                                                                                new VariableExp("v"),
+                                                                                                new ConstantValue(
+                                                                                                        new IntValue(
+                                                                                                                1)))))),
+                                                                new AssignStmt("v",
+                                                                        new ArithExp('+',
+                                                                                new VariableExp("v"),
+                                                                                new ConstantValue(new IntValue(1)))))),
+                                                new CompStmt(
+                                                        new AssignStmt("x",
+                                                                new ConstantValue(new IntValue(1))),
+                                                        new CompStmt(
+                                                                new NoOPStmt(),
+                                                                new CompStmt(
+                                                                        new AssignStmt("y",
+                                                                                new ConstantValue(new IntValue(3))),
+                                                                        new CompStmt(
+                                                                                new NoOPStmt(),
+                                                                                new PrintStmt(
+                                                                                        new ArithExp('*',
+                                                                                                new VariableExp("v"),
+                                                                                                new ConstantValue(
+                                                                                                        new IntValue(
+                                                                                                                10)))))))))))));
+
+        programs.add(prog11);
 
         ObservableList<String> programStrings = FXCollections.observableArrayList();
         for (IStmt stmt : programs) {
