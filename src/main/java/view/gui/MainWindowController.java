@@ -112,6 +112,16 @@ public class MainWindowController {
     ObservableList<Map.Entry<Integer, IValue>> heapEntries = FXCollections.observableArrayList(
         heap.getHeap().entrySet());
     heapTableView.setItems(heapEntries);
+
+    // Add a listener to refresh the heap table view whenever its items change
+    this.heapTableView.getItems()
+        .addListener((javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, IValue>> change) -> {
+          while (change.next()) {
+            if (change.wasUpdated()) {
+              this.heapTableView.refresh();
+            }
+          }
+        });
   }
 
   private void populateOutput() {
@@ -207,6 +217,16 @@ public class MainWindowController {
       }
     }
     symTableView.setItems(symTableEntries);
+
+    // Add a listener to refresh the symbol table view whenever its items change
+    this.symTableView.getItems()
+        .addListener((javafx.collections.ListChangeListener.Change<? extends Map.Entry<String, IValue>> change) -> {
+          while (change.next()) {
+            if (change.wasUpdated()) {
+              this.symTableView.refresh();
+            }
+          }
+        });
   }
 
   @FXML
@@ -220,24 +240,18 @@ public class MainWindowController {
       return;
     }
 
-    List<PrgState> prgList = controller.removeCompletedPrg(controller.getRepo().getPrgList());
-    if (prgList.isEmpty()) {
-      Alert alert = new Alert(Alert.AlertType.ERROR);
-      alert.setTitle("Error");
-      alert.setHeaderText(null);
-      alert.setContentText("Nothing left to execute!");
-      alert.showAndWait();
-      return;
-    }
+    boolean programStateLeft = controller.executeOneStep();
+    populateAll();
 
-    try {
-      controller.oneStepForAllPrg(prgList);
-      populateAll();
-    } catch (InterruptedException e) {
-      Alert alert = new Alert(Alert.AlertType.ERROR);
-      alert.setTitle("Error");
+    // Force refresh the views to show updated values
+    this.symTableView.refresh();
+    this.heapTableView.refresh();
+
+    if (!programStateLeft) {
+      Alert alert = new Alert(Alert.AlertType.INFORMATION);
+      alert.setTitle("Program finished");
       alert.setHeaderText(null);
-      alert.setContentText(e.getMessage());
+      alert.setContentText("Program execution finished!");
       alert.showAndWait();
     }
   }

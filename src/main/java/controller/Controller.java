@@ -92,33 +92,35 @@ public class Controller {
     typeChecked = true;
   }
 
-  public void allSteps() throws MyException {
+  public boolean executeOneStep() {
     if (!typeChecked) {
-      typecheck();
-    }
-
-    executor = Executors.newFixedThreadPool(2);
-    List<PrgState> prgList = removeCompletedPrg(repo.getPrgList());
-
-    while (prgList.size() > 0) {
-      IHeap<Integer, IValue> heap = prgList.get(0).getHeap();
-
-      Set<Integer> usedAddresses = prgList.stream()
-          .flatMap(p -> p.getUsedAddresses().stream())
-          .collect(Collectors.toSet());
-
-      heap.setHeap(heap.safeGarbageCollector(usedAddresses, heap.getHeap()));
-
       try {
-        oneStepForAllPrg(prgList);
-      } catch (InterruptedException e) {
-        throw new MyException("Program execution interrupted");
+        typecheck();
+      } catch (MyException e) {
+        System.out.println(e.getMessage());
+        return false;
       }
-
-      prgList = removeCompletedPrg(repo.getPrgList());
     }
 
-    executor.shutdownNow();
-    repo.setPrgList(prgList);
+    List<PrgState> prgList = removeCompletedPrg(repo.getPrgList());
+    if (prgList.isEmpty()) {
+      return false;
+    }
+
+    // Garbage collection
+    IHeap<Integer, IValue> heap = prgList.get(0).getHeap();
+    Set<Integer> usedAddresses = prgList.stream()
+        .flatMap(p -> p.getUsedAddresses().stream())
+        .collect(Collectors.toSet());
+    heap.setHeap(heap.safeGarbageCollector(usedAddresses, heap.getHeap()));
+
+    try {
+      oneStepForAllPrg(prgList);
+    } catch (InterruptedException e) {
+      System.out.println("Program execution interrupted: " + e.getMessage());
+      return false;
+    }
+
+    return true;
   }
 }
