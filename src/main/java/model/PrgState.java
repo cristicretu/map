@@ -3,6 +3,7 @@ package model;
 import utils.IStack;
 import utils.IDict;
 import utils.IHeap;
+import utils.ILatchTable;
 import utils.IList;
 import model.statement.IStmt;
 import model.value.IValue;
@@ -65,12 +66,19 @@ public class PrgState {
     return heap;
   }
 
+  private ILatchTable<Integer, Integer> latchTable;
+
+  public ILatchTable<Integer, Integer> getLatchTable() {
+    return latchTable;
+  }
+
   private static synchronized int getNextId() {
     return nextId++;
   }
 
   public PrgState(IStack<IStmt> exeStack, IDict<String, IValue> symTable, IList<IValue> output, IStmt originalProgram,
-      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap) {
+      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap,
+      ILatchTable<Integer, Integer> latchTable) {
     this.id = getNextId();
     this.exeStack = exeStack;
     this.symTable = symTable;
@@ -78,6 +86,7 @@ public class PrgState {
     this.originalProgram = originalProgram.deepCopy();
     this.fileTable = fileTable;
     this.heap = heap;
+    this.latchTable = latchTable;
     this.isNotCompleted = true;
     exeStack.push(originalProgram);
   }

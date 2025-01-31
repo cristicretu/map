@@ -43,6 +43,7 @@ import utils.MyStack;
 import utils.MyDict;
 import utils.MyList;
 import utils.MyHeap;
+import utils.MyLatchTable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -272,7 +273,8 @@ public class ProgramListController {
           new MyList<>(),
           program,
           new MyDict<>(),
-          new MyHeap<>());
+          new MyHeap<>(),
+          new MyLatchTable());
 
       IRepository repo = new Repository(prgState, "log" + (index + 1) + ".txt");
       Controller controller = new Controller(repo);
