@@ -15,6 +15,7 @@ import model.statement.AssignStmt;
 import model.statement.PrintStmt;
 import model.statement.IfStmt;
 import model.statement.VarDeclStmt;
+import model.statement.WaitStmt;
 import model.statement.WhileStmt;
 import model.statement.NewStmt;
 import model.statement.NoOPStmt;
@@ -241,6 +242,13 @@ public class ProgramListController {
                             new PrintStmt(new RefExp(
                                 new VariableExp("a")))))))));
     programs.add(prog10);
+
+    // v=20; wait(10);print(v*10)
+    IStmt WaitPrg = new CompStmt(new VarDeclStmt("v", new IntType()),
+        new CompStmt(new AssignStmt("v", new ConstantValue(new IntValue(20))),
+            new CompStmt(new WaitStmt(10),
+                new PrintStmt(new ArithExp('*', new VariableExp("v"), new ConstantValue(new IntValue(10)))))));
+    programs.add(WaitPrg);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
