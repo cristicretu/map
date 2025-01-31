@@ -27,20 +27,21 @@ public class MyLatchTable implements ILatchTable<Integer, Integer> {
 
   @Override
   public void put(Integer key, Integer value) throws LatchException {
-    if (!key.equals(nextFreeLocation))
-      throw new LatchException("Invalid lock table location!");
-    this.latchTable.put(key, value);
     synchronized (this) {
-      nextFreeLocation++;
+      this.latchTable.put(key, value);
+      if (key >= nextFreeLocation) {
+        nextFreeLocation = key + 1;
+      }
     }
   }
 
   public int put(Integer value) throws LatchException {
-    this.latchTable.put(nextFreeLocation, value);
     synchronized (this) {
+      int location = nextFreeLocation;
+      this.latchTable.put(location, value);
       nextFreeLocation++;
+      return location;
     }
-    return nextFreeLocation - 1;
   }
 
   @Override
@@ -70,10 +71,9 @@ public class MyLatchTable implements ILatchTable<Integer, Integer> {
 
   @Override
   public int getFirstFreeLocation() {
-    int locationAddress = 1;
-    while (this.getLatchTable().get(locationAddress) != null)
-      locationAddress++;
-    return locationAddress;
+    synchronized (this) {
+      return nextFreeLocation;
+    }
   }
 
   @Override

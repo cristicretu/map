@@ -11,9 +11,12 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.Alert;
 import model.statement.IStmt;
 import model.statement.CompStmt;
+import model.statement.CountDownStmt;
 import model.statement.AssignStmt;
+import model.statement.AwaitStmt;
 import model.statement.PrintStmt;
 import model.statement.IfStmt;
+import model.statement.NewLatchStmt;
 import model.statement.VarDeclStmt;
 import model.statement.WhileStmt;
 import model.statement.NewStmt;
@@ -242,6 +245,71 @@ public class ProgramListController {
                             new PrintStmt(new RefExp(
                                 new VariableExp("a")))))))));
     programs.add(prog10);
+
+    // Ref int v1; Ref int v2; Ref int v3; int cnt;
+    // new(v1,2);new(v2,3);new(v3,4);newLatch(cnt,rH(v2));
+    // fork(wh(v1,rh(v1)*10));print(rh(v1));countDown(cnt);
+    // fork(wh(v2,rh(v2)*10));print(rh(v2));countDown(cnt);
+    // fork(wh(v3,rh(v3)*10));print(rh(v3));countDown(cnt))));
+    // await(cnt);
+    // print(100);
+    // countDown(cnt);
+    // print(100)
+    IStmt countDownStmt = new CompStmt(
+        new VarDeclStmt("v1", new RefType(new IntType())),
+        new CompStmt(
+            new VarDeclStmt("v2", new RefType(new IntType())),
+            new CompStmt(
+                new VarDeclStmt("v3", new RefType(new IntType())),
+                new CompStmt(
+                    new VarDeclStmt("cnt", new IntType()),
+                    new CompStmt(
+                        new NewStmt("v1", new ConstantValue(new IntValue(2))),
+                        new CompStmt(
+                            new NewStmt("v2", new ConstantValue(new IntValue(3))),
+                            new CompStmt(
+                                new NewStmt("v3", new ConstantValue(new IntValue(4))),
+                                new CompStmt(
+                                    new NewLatchStmt("cnt", new RefExp(new VariableExp("v2"))),
+                                    new CompStmt(
+                                        new ForkStmt(
+                                            new CompStmt(
+                                                new WriteHeapStmt("v1",
+                                                    new ArithExp('*',
+                                                        new RefExp(new VariableExp("v1")),
+                                                        new ConstantValue(new IntValue(10)))),
+                                                new CompStmt(
+                                                    new PrintStmt(new RefExp(new VariableExp("v1"))),
+                                                    new CountDownStmt("cnt")))),
+                                        new CompStmt(
+                                            new ForkStmt(
+                                                new CompStmt(
+                                                    new WriteHeapStmt("v2",
+                                                        new ArithExp('*',
+                                                            new RefExp(new VariableExp("v2")),
+                                                            new ConstantValue(new IntValue(10)))),
+                                                    new CompStmt(
+                                                        new PrintStmt(new RefExp(new VariableExp("v2"))),
+                                                        new CountDownStmt("cnt")))),
+                                            new CompStmt(
+                                                new ForkStmt(
+                                                    new CompStmt(
+                                                        new WriteHeapStmt("v3",
+                                                            new ArithExp('*',
+                                                                new RefExp(new VariableExp("v3")),
+                                                                new ConstantValue(new IntValue(10)))),
+                                                        new CompStmt(
+                                                            new PrintStmt(new RefExp(new VariableExp("v3"))),
+                                                            new CountDownStmt("cnt")))),
+                                                new CompStmt(
+                                                    new AwaitStmt("cnt"),
+                                                    new CompStmt(
+                                                        new PrintStmt(new ConstantValue(new IntValue(100))),
+                                                        new CompStmt(
+                                                            new CountDownStmt("cnt"),
+                                                            new PrintStmt(
+                                                                new ConstantValue(new IntValue(100)))))))))))))))));
+    programs.add(countDownStmt);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {

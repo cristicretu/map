@@ -36,6 +36,7 @@ public class NewLatchStmt implements IStmt {
         throw new MyException(e.getMessage());
       }
       Integer newLatch = latchTable.getFirstFreeLocation();
+      latchTable.put(newLatch, ((IntValue) num1).getVal());
       try {
         prg.getSymTable().update(this.var, new IntValue(newLatch));
       } catch (DictionaryException e) {
@@ -59,14 +60,18 @@ public class NewLatchStmt implements IStmt {
 
   @Override
   public IDict<String, IType> typecheck(IDict<String, IType> typeEnv) throws MyException {
-    // check if both are integer
     try {
-      if (this.exp.typecheck(typeEnv).equals(new IntType()) && this.var.equals("latch")) {
-        return typeEnv;
-      } else {
-        throw new MyException("NewLatchStmt: Invalid type for variable or expression");
+      IType varType = typeEnv.get(var);
+      IType expType = exp.typecheck(typeEnv);
+
+      if (!varType.equals(new IntType())) {
+        throw new MyException("NewLatchStmt: Variable must be of type int");
       }
-    } catch (ExpressionException | MyException e) {
+      if (!expType.equals(new IntType())) {
+        throw new MyException("NewLatchStmt: Expression must evaluate to int");
+      }
+      return typeEnv;
+    } catch (ExpressionException | DictionaryException e) {
       throw new MyException(e.getMessage());
     }
   }
