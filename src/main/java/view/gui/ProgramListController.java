@@ -22,7 +22,7 @@ import model.statement.WriteHeapStmt;
 import model.statement.ForkStmt;
 import model.statement.OpenRFile;
 import model.statement.ReadFile;
-import model.statement.RepeatUntilStmt;
+import model.statement.TernaryOpStmt;
 import model.statement.CloseRFile;
 import model.exp.VariableExp;
 import model.exp.ArithExp;
@@ -242,6 +242,30 @@ public class ProgramListController {
                             new PrintStmt(new RefExp(
                                 new VariableExp("a")))))))));
     programs.add(prog10);
+
+    // bool b;
+    // int c;
+    // b = true;
+    // c = b ? 100 : 200;
+    // print(c);
+    // c = (false) ? 100 : 200;
+    // print(c);
+    IStmt ternary = new CompStmt(new VarDeclStmt("b", new BoolType()),
+        new CompStmt(new VarDeclStmt("c", new IntType()),
+            new CompStmt(new AssignStmt("b", new ConstantValue(new BoolValue(true))),
+                new CompStmt(
+                    new TernaryOpStmt("c", new VariableExp("b"), new ConstantValue(new IntValue(100)),
+                        new ConstantValue(new IntValue(200))),
+                    new CompStmt(new PrintStmt(new VariableExp("c")),
+                        new CompStmt(
+                            new TernaryOpStmt("c", new ConstantValue(new BoolValue(false)),
+                                new ConstantValue(new IntValue(100)),
+                                new ConstantValue(new IntValue(200))),
+                            new PrintStmt(new VariableExp("c")))))))
+
+    );
+
+    programs.add(ternary);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
