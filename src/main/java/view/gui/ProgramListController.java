@@ -22,6 +22,7 @@ import model.statement.WriteHeapStmt;
 import model.statement.ForkStmt;
 import model.statement.OpenRFile;
 import model.statement.ReadFile;
+import model.statement.SleepStmt;
 import model.statement.CloseRFile;
 import model.exp.VariableExp;
 import model.exp.ArithExp;
@@ -241,6 +242,26 @@ public class ProgramListController {
                             new PrintStmt(new RefExp(
                                 new VariableExp("a")))))))));
     programs.add(prog10);
+
+    // v=10;
+    // (fork(v=v-1;v=v-1;print(v)); sleep(10);print(v*10)
+    IStmt sleepPrg = new CompStmt(
+        new VarDeclStmt("v", new IntType()),
+        new CompStmt(
+            new AssignStmt("v", new ConstantValue(new IntValue(10))),
+            new CompStmt(
+                new ForkStmt(
+                    new CompStmt(
+                        new AssignStmt("v",
+                            new ArithExp('-', new VariableExp("v"), new ConstantValue(new IntValue(1)))),
+                        new CompStmt(
+                            new AssignStmt("v",
+                                new ArithExp('-', new VariableExp("v"), new ConstantValue(new IntValue(1)))),
+                            new PrintStmt(new VariableExp("v"))))),
+                new CompStmt(
+                    new SleepStmt(10),
+                    new PrintStmt(new ArithExp('*', new VariableExp("v"), new ConstantValue(new IntValue(10))))))));
+    programs.add(sleepPrg);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
