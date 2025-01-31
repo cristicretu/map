@@ -243,6 +243,55 @@ public class ProgramListController {
                                 new VariableExp("a")))))))));
     programs.add(prog10);
 
+    // int v; int x; int y; v=0;
+    // (repeat (fork(print(v);v=v-1);v=v+1) until v==3);
+    // x=1;nop;y=3;nop;
+    // print(v*10)
+    IStmt repeatUntil = new CompStmt(
+        new VarDeclStmt("v", new IntType()),
+        new CompStmt(
+            new VarDeclStmt("x", new IntType()),
+            new CompStmt(
+                new VarDeclStmt("y", new IntType()),
+                new CompStmt(
+                    new AssignStmt("v", new ConstantValue(new IntValue(0))),
+                    new CompStmt(
+                        new RepeatUntilStmt(
+                            new RelExp(new VariableExp("v"),
+                                new ConstantValue(new IntValue(3)), "=="),
+                            new CompStmt(
+                                new ForkStmt(
+                                    new CompStmt(
+                                        new PrintStmt(new VariableExp("v")),
+                                        new AssignStmt("v",
+                                            new ArithExp('-',
+                                                new VariableExp("v"),
+                                                new ConstantValue(
+                                                    new IntValue(
+                                                        1)))))),
+                                new AssignStmt("v",
+                                    new ArithExp('+',
+                                        new VariableExp("v"),
+                                        new ConstantValue(new IntValue(1)))))),
+                        new CompStmt(
+                            new AssignStmt("x",
+                                new ConstantValue(new IntValue(1))),
+                            new CompStmt(
+                                new NoOPStmt(),
+                                new CompStmt(
+                                    new AssignStmt("y",
+                                        new ConstantValue(new IntValue(3))),
+                                    new CompStmt(
+                                        new NoOPStmt(),
+                                        new PrintStmt(
+                                            new ArithExp('*',
+                                                new VariableExp("v"),
+                                                new ConstantValue(
+                                                    new IntValue(
+                                                        10)))))))))))));
+
+    programs.add(repeatUntil);
+
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
       programStrings.add(stmt.toString());
