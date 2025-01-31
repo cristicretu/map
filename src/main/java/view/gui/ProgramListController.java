@@ -27,6 +27,7 @@ import model.exp.VariableExp;
 import model.exp.ArithExp;
 import model.exp.RelExp;
 import model.exp.ConstantValue;
+import model.exp.MulExp;
 import model.exp.RefExp;
 import model.type.IntType;
 import model.type.BoolType;
@@ -241,6 +242,19 @@ public class ProgramListController {
                             new PrintStmt(new RefExp(
                                 new VariableExp("a")))))))));
     programs.add(prog10);
+
+    // v1=2;v2=3; (if (v1) then print(MUL(v1,v2)) else print (v1))
+    IStmt MulPrg = new CompStmt(
+        new VarDeclStmt("v1", new IntType()),
+        new CompStmt(
+            new VarDeclStmt("v2", new IntType()),
+            new CompStmt(
+                new AssignStmt("v1", new ConstantValue(new IntValue(2))),
+                new CompStmt(new AssignStmt("v2", new ConstantValue(new IntValue(3))),
+                    new IfStmt(new RelExp(new VariableExp("v1"), new ConstantValue(new IntValue(0)), "!="),
+                        new PrintStmt(new MulExp(new VariableExp("v1"), new VariableExp("v2"))),
+                        new PrintStmt(new VariableExp("v1")))))));
+    programs.add(MulPrg);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
