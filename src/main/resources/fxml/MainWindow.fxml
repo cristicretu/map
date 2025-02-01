@@ -25,6 +25,13 @@
                 </columns>
             </TableView>
 
+            <TableView fx:id="latchTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="latchAddressColumn" text="Address"/>
+                    <TableColumn fx:id="latchValueColumn" text="Value"/>
+                </columns>
+            </TableView>
+
             <Label text="Output"/>
             <ListView fx:id="outputListView" VBox.vgrow="ALWAYS"/>
 

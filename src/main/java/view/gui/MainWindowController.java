@@ -11,6 +11,7 @@ import model.statement.IStmt;
 import controller.Controller;
 import exceptions.StackException;
 import utils.IHeap;
+import utils.ILatchTable;
 import utils.IStack;
 import utils.MyDict;
 import utils.MyList;
@@ -22,6 +23,8 @@ import java.util.stream.Collectors;
 import java.io.BufferedReader;
 import model.value.StringValue;
 import java.lang.reflect.Field;
+import model.value.IntValue;
+import java.util.AbstractMap;
 
 public class MainWindowController {
   private Controller controller;
@@ -36,6 +39,13 @@ public class MainWindowController {
   private TableColumn<Map.Entry<Integer, IValue>, String> heapAddressColumn;
   @FXML
   private TableColumn<Map.Entry<Integer, IValue>, String> heapValueColumn;
+
+  @FXML
+  private TableView<Map.Entry<Integer, IValue>> latchTableView;
+  @FXML
+  private TableColumn<Map.Entry<Integer, IValue>, String> latchAddressColumn;
+  @FXML
+  private TableColumn<Map.Entry<Integer, IValue>, String> latchValueColumn;
 
   @FXML
   private ListView<String> outputListView;
@@ -72,6 +82,11 @@ public class MainWindowController {
     symTableValueColumn
         .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
 
+    latchAddressColumn
+        .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey().toString()));
+    latchValueColumn
+        .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
+
     prgStateIdentifiersListView.getSelectionModel().selectedItemProperty().addListener(
         (observable, oldValue, newValue) -> {
           if (newValue != null) {
@@ -91,7 +106,7 @@ public class MainWindowController {
     populateFileTable();
     populatePrgStateIdentifiers();
     populateNumberOfPrgStates();
-
+    populateLatchTable();
     if (selectedProgram == null && !controller.getRepo().getPrgList().isEmpty()) {
       selectedProgram = controller.getRepo().getPrgList().get(0);
       prgStateIdentifiersListView.getSelectionModel().select(0);
@@ -100,11 +115,21 @@ public class MainWindowController {
     if (selectedProgram != null) {
       populateExeStack();
       populateSymTable();
+      populateLatchTable();
     }
   }
 
   private void populateNumberOfPrgStates() {
     numberOfPrgStatesTextField.setText(String.valueOf(controller.getRepo().getPrgList().size()));
+  }
+
+  private void populateLatchTable() {
+    ILatchTable<Integer, Integer> latchTable = controller.getRepo().getPrgList().get(0).getLatchTable();
+    ObservableList<Map.Entry<Integer, IValue>> latchEntries = FXCollections.observableArrayList(
+        latchTable.getLatchTable().entrySet().stream()
+            .map(e -> new AbstractMap.SimpleEntry<Integer, IValue>(e.getKey(), new IntValue(e.getValue())))
+            .collect(Collectors.toList()));
+    latchTableView.setItems(latchEntries);
   }
 
   private void populateHeapTable() {
@@ -246,7 +271,7 @@ public class MainWindowController {
     // Force refresh the views to show updated values
     this.symTableView.refresh();
     this.heapTableView.refresh();
-
+    this.latchTableView.refresh();
     if (!programStateLeft) {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
       alert.setTitle("Program finished");
