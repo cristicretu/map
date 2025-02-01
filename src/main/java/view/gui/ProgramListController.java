@@ -35,6 +35,7 @@ import model.type.IntType;
 import model.type.BoolType;
 import model.type.RefType;
 import model.type.StringType;
+import model.value.IValue;
 import model.value.IntValue;
 import model.value.BoolValue;
 import model.value.StringValue;
@@ -47,8 +48,10 @@ import utils.MyDict;
 import utils.MyList;
 import utils.MyHeap;
 import utils.MyLock;
+import utils.ILock;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.BufferedReader;
 
 public class ProgramListController {
   @FXML
@@ -272,7 +275,7 @@ public class ProgramListController {
                 new WriteHeapStmt("v1",
                     new ArithExp('-', new RefExp(new VariableExp("v1")), new ConstantValue(new IntValue(1)))),
                 new UnlockStmt("x")))),
-        new CompStmt(new LockStmt("x"), new CompStmt(new WriteHeapStmt("v1,",
+        new CompStmt(new LockStmt("x"), new CompStmt(new WriteHeapStmt("v1",
             new ArithExp('+', new RefExp(new VariableExp("v1")), new ConstantValue(new IntValue(1)))),
             new UnlockStmt("x")))));
 
@@ -286,14 +289,16 @@ public class ProgramListController {
                 new UnlockStmt("x"))));
 
     IStmt LockStmt = new CompStmt(
-        new NewStmt("v1", new ConstantValue(new IntValue(20))),
-        new CompStmt(new NewStmt("v2", new ConstantValue(new IntValue(30))),
-            new CompStmt(new NewLockStmt("x"),
-                new CompStmt(Fork1,
-                    new CompStmt(Fork2,
-                        new CompStmt(skip,
-                            new CompStmt(new PrintStmt(new RefExp(new VariableExp("v1"))),
-                                new PrintStmt(new RefExp(new VariableExp("x2"))))))))));
+        new VarDeclStmt("v1", new RefType(new IntType())),
+        new CompStmt(new VarDeclStmt("v2", new RefType(new IntType())),
+            new CompStmt(new NewStmt("v1", new ConstantValue(new IntValue(20))),
+                new CompStmt(new NewStmt("v2", new ConstantValue(new IntValue(30))),
+                    new CompStmt(new NewLockStmt("x"),
+                        new CompStmt(Fork1,
+                            new CompStmt(Fork2,
+                                new CompStmt(skip,
+                                    new CompStmt(new PrintStmt(new RefExp(new VariableExp("v1"))),
+                                        new PrintStmt(new RefExp(new VariableExp("v2"))))))))))));
     programs.add(LockStmt);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
@@ -321,12 +326,12 @@ public class ProgramListController {
 
     try {
       PrgState prgState = new PrgState(
-          new MyStack<>(),
-          new MyDict<>(),
-          new MyList<>(),
+          new MyStack<IStmt>(),
+          new MyDict<String, IValue>(),
+          new MyList<IValue>(),
           program,
-          new MyDict<>(),
-          new MyHeap<>(),
+          new MyDict<StringValue, BufferedReader>(),
+          new MyHeap<Integer, IValue>(),
           new MyLock());
 
       IRepository repo = new Repository(prgState, "log" + (index + 1) + ".txt");

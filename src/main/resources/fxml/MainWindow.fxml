@@ -25,6 +25,7 @@
                 </columns>
             </TableView>
 
+            <Label text="LockTable"/>
             <TableView fx:id="lockTableView" VBox.vgrow="ALWAYS">
                 <columns>
                     <TableColumn fx:id="lockKeyColumn" text="Key"/>
