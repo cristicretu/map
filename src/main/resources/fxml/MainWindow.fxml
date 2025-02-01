@@ -25,6 +25,15 @@
                 </columns>
             </TableView>
 
+            <Label text="CyclicBarrier"/>
+            <TableView fx:id="cyclicBarrierTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="cyc1" text="Key"/>
+                    <TableColumn fx:id="cyc2" text="Value"/>
+                    <TableColumn fx:id="cyc3" text="List"/>
+                </columns>
+            </TableView>
+
             <Label text="Output"/>
             <ListView fx:id="outputListView" VBox.vgrow="ALWAYS"/>
 

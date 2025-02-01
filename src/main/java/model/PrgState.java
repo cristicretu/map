@@ -1,6 +1,7 @@
 package model;
 
 import utils.IStack;
+import utils.ICyclicBarrier;
 import utils.IDict;
 import utils.IHeap;
 import utils.IList;
@@ -65,12 +66,18 @@ public class PrgState {
     return heap;
   }
 
+  private ICyclicBarrier cyclicBarrier;
+
+  public ICyclicBarrier getCyclicBarrier() {
+    return cyclicBarrier;
+  }
+
   private static synchronized int getNextId() {
     return nextId++;
   }
 
   public PrgState(IStack<IStmt> exeStack, IDict<String, IValue> symTable, IList<IValue> output, IStmt originalProgram,
-      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap) {
+      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap, ICyclicBarrier cyclicBarrier) {
     this.id = getNextId();
     this.exeStack = exeStack;
     this.symTable = symTable;
@@ -78,6 +85,7 @@ public class PrgState {
     this.originalProgram = originalProgram.deepCopy();
     this.fileTable = fileTable;
     this.heap = heap;
+    this.cyclicBarrier = cyclicBarrier;
     this.isNotCompleted = true;
     exeStack.push(originalProgram);
   }
@@ -87,7 +95,8 @@ public class PrgState {
     return "PrgState{\n" + "id=" + id + ",\n exeStack=" + exeStack.getList() + ",\n symTable=" + symTable
         + ",\n output=" + output
         + ",\n originalProgram="
-        + originalProgram + ",\n fileTable=" + fileTable + ",\n heap=" + heap + "\n}";
+        + originalProgram + ",\n fileTable=" + fileTable + ",\n heap=" + heap + ",\n cyclicBarrier=" + cyclicBarrier
+        + "\n}";
   }
 
   public Set<Integer> getUsedAddresses() {

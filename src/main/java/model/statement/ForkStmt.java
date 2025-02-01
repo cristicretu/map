@@ -21,7 +21,8 @@ public class ForkStmt implements IStmt {
         currentPrg.getOutput(),
         statement,
         currentPrg.getFileTable(),
-        currentPrg.getHeap());
+        currentPrg.getHeap(),
+        currentPrg.getCyclicBarrier());
   }
 
   @Override

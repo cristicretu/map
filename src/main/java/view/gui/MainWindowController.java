@@ -2,6 +2,7 @@ package view.gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.util.Pair;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.beans.property.SimpleStringProperty;
@@ -12,6 +13,7 @@ import controller.Controller;
 import exceptions.StackException;
 import utils.IHeap;
 import utils.IStack;
+import utils.MyCyclicBarrier;
 import utils.MyDict;
 import utils.MyList;
 import utils.MyStack;
@@ -22,6 +24,8 @@ import java.util.stream.Collectors;
 import java.io.BufferedReader;
 import model.value.StringValue;
 import java.lang.reflect.Field;
+import utils.IDict;
+import java.util.AbstractMap;
 
 public class MainWindowController {
   private Controller controller;
@@ -36,6 +40,15 @@ public class MainWindowController {
   private TableColumn<Map.Entry<Integer, IValue>, String> heapAddressColumn;
   @FXML
   private TableColumn<Map.Entry<Integer, IValue>, String> heapValueColumn;
+
+  @FXML
+  private TableView<Map.Entry<Integer, Pair<Integer, List<Integer>>>> cyclicBarrierTableView;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Pair<Integer, List<Integer>>>, String> cyc1;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Pair<Integer, List<Integer>>>, String> cyc2;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Pair<Integer, List<Integer>>>, String> cyc3;
 
   @FXML
   private ListView<String> outputListView;
@@ -72,6 +85,11 @@ public class MainWindowController {
     symTableValueColumn
         .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
 
+    cyc1.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey().toString()));
+    cyc2.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().getKey().toString()));
+    cyc3.setCellValueFactory(
+        cellData -> new SimpleStringProperty(cellData.getValue().getValue().getValue().toString()));
+
     prgStateIdentifiersListView.getSelectionModel().selectedItemProperty().addListener(
         (observable, oldValue, newValue) -> {
           if (newValue != null) {
@@ -91,6 +109,7 @@ public class MainWindowController {
     populateFileTable();
     populatePrgStateIdentifiers();
     populateNumberOfPrgStates();
+    populateCyclicBarrier();
 
     if (selectedProgram == null && !controller.getRepo().getPrgList().isEmpty()) {
       selectedProgram = controller.getRepo().getPrgList().get(0);
@@ -100,6 +119,7 @@ public class MainWindowController {
     if (selectedProgram != null) {
       populateExeStack();
       populateSymTable();
+      populateCyclicBarrier();
     }
   }
 
@@ -145,6 +165,30 @@ public class MainWindowController {
       }
     }
     outputListView.setItems(output);
+  }
+
+  private void populateCyclicBarrier() {
+    ObservableList<Map.Entry<Integer, Pair<Integer, List<Integer>>>> cyclicBarrierEntries = FXCollections
+        .observableArrayList();
+    if (!controller.getRepo().getPrgList().isEmpty()) {
+      MyCyclicBarrier cyclicBarrier = (MyCyclicBarrier) controller.getRepo().getPrgList().get(0).getCyclicBarrier();
+      try {
+        Field dictField = MyCyclicBarrier.class.getDeclaredField("dict");
+        dictField.setAccessible(true);
+        @SuppressWarnings("unchecked")
+        MyDict<Integer, Pair<Integer, List<Integer>>> dict = (MyDict<Integer, Pair<Integer, List<Integer>>>) dictField
+            .get(cyclicBarrier);
+        Field mapField = MyDict.class.getDeclaredField("dict");
+        mapField.setAccessible(true);
+        @SuppressWarnings("unchecked")
+        Map<Integer, Pair<Integer, List<Integer>>> map = (Map<Integer, Pair<Integer, List<Integer>>>) mapField
+            .get(dict);
+        cyclicBarrierEntries.addAll(map.entrySet());
+      } catch (NoSuchFieldException | IllegalAccessException e) {
+        e.printStackTrace();
+      }
+    }
+    cyclicBarrierTableView.setItems(cyclicBarrierEntries);
   }
 
   private void populateFileTable() {
