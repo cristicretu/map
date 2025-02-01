@@ -25,6 +25,13 @@
                 </columns>
             </TableView>
 
+            <TableView fx:id="lockTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="lockKeyColumn" text="Key"/>
+                    <TableColumn fx:id="lockValueColumn" text="Value"/>
+                </columns>
+            </TableView>
+
             <Label text="Output"/>
             <ListView fx:id="outputListView" VBox.vgrow="ALWAYS"/>
 

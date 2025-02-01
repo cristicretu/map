@@ -4,6 +4,7 @@ import utils.IStack;
 import utils.IDict;
 import utils.IHeap;
 import utils.IList;
+import utils.ILock;
 import model.statement.IStmt;
 import model.value.IValue;
 import model.value.RefValue;
@@ -65,12 +66,18 @@ public class PrgState {
     return heap;
   }
 
+  private ILock<Integer, Integer> lock;
+
+  public ILock<Integer, Integer> getLock() {
+    return lock;
+  }
+
   private static synchronized int getNextId() {
     return nextId++;
   }
 
   public PrgState(IStack<IStmt> exeStack, IDict<String, IValue> symTable, IList<IValue> output, IStmt originalProgram,
-      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap) {
+      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap, ILock<Integer, Integer> lock) {
     this.id = getNextId();
     this.exeStack = exeStack;
     this.symTable = symTable;
@@ -78,6 +85,7 @@ public class PrgState {
     this.originalProgram = originalProgram.deepCopy();
     this.fileTable = fileTable;
     this.heap = heap;
+    this.lock = lock;
     this.isNotCompleted = true;
     exeStack.push(originalProgram);
   }

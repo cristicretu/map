@@ -14,6 +14,8 @@ import model.statement.CompStmt;
 import model.statement.AssignStmt;
 import model.statement.PrintStmt;
 import model.statement.IfStmt;
+import model.statement.LockStmt;
+import model.statement.NewLockStmt;
 import model.statement.VarDeclStmt;
 import model.statement.WhileStmt;
 import model.statement.NewStmt;
@@ -22,6 +24,7 @@ import model.statement.WriteHeapStmt;
 import model.statement.ForkStmt;
 import model.statement.OpenRFile;
 import model.statement.ReadFile;
+import model.statement.UnlockStmt;
 import model.statement.CloseRFile;
 import model.exp.VariableExp;
 import model.exp.ArithExp;
@@ -43,6 +46,7 @@ import utils.MyStack;
 import utils.MyDict;
 import utils.MyList;
 import utils.MyHeap;
+import utils.MyLock;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -242,6 +246,56 @@ public class ProgramListController {
                                 new VariableExp("a")))))))));
     programs.add(prog10);
 
+    // new(v1,20);new(v2,30);newLock(x);
+    // fork(
+    // fork(
+    // lock(x);wh(v1,rh(v1)-1);unlock(x)
+    // );
+    // lock(x);wh(v1,rh(v1)+1);unlock(x)
+    // );
+    // fork(
+    // fork(wh(v2,rh(v2)+1));
+    // wh(v2,rh(v2)+1);unlock(x)
+    // 2. );
+    // skip;skip;skip;skip;skip;skip;skip;skip;skip
+    // print (rh(v1));
+    // print(rh(v2))
+    IStmt SkipStmt = new NoOPStmt();
+    IStmt Chained = new CompStmt(SkipStmt, SkipStmt);
+    IStmt Chained2 = new CompStmt(Chained, Chained);
+    IStmt Chained3 = new CompStmt(Chained2, Chained2);
+    IStmt skip = new CompStmt(SkipStmt, Chained3); // 9
+
+    IStmt Fork1 = new ForkStmt(new CompStmt(new ForkStmt(
+        new CompStmt(new LockStmt("x"),
+            new CompStmt(
+                new WriteHeapStmt("v1",
+                    new ArithExp('-', new RefExp(new VariableExp("v1")), new ConstantValue(new IntValue(1)))),
+                new UnlockStmt("x")))),
+        new CompStmt(new LockStmt("x"), new CompStmt(new WriteHeapStmt("v1,",
+            new ArithExp('+', new RefExp(new VariableExp("v1")), new ConstantValue(new IntValue(1)))),
+            new UnlockStmt("x")))));
+
+    IStmt Fork2 = new ForkStmt(
+        new CompStmt(
+            new ForkStmt(new WriteHeapStmt("v2",
+                new ArithExp('+', new RefExp(new VariableExp("v2")), new ConstantValue(new IntValue(1))))),
+            new CompStmt(
+                new WriteHeapStmt("v2",
+                    new ArithExp('+', new RefExp(new VariableExp("v2")), new ConstantValue(new IntValue(1)))),
+                new UnlockStmt("x"))));
+
+    IStmt LockStmt = new CompStmt(
+        new NewStmt("v1", new ConstantValue(new IntValue(20))),
+        new CompStmt(new NewStmt("v2", new ConstantValue(new IntValue(30))),
+            new CompStmt(new NewLockStmt("x"),
+                new CompStmt(Fork1,
+                    new CompStmt(Fork2,
+                        new CompStmt(skip,
+                            new CompStmt(new PrintStmt(new RefExp(new VariableExp("v1"))),
+                                new PrintStmt(new RefExp(new VariableExp("x2"))))))))));
+    programs.add(LockStmt);
+
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
       programStrings.add(stmt.toString());
@@ -272,7 +326,8 @@ public class ProgramListController {
           new MyList<>(),
           program,
           new MyDict<>(),
-          new MyHeap<>());
+          new MyHeap<>(),
+          new MyLock());
 
       IRepository repo = new Repository(prgState, "log" + (index + 1) + ".txt");
       Controller controller = new Controller(repo);

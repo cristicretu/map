@@ -11,17 +11,22 @@ import model.statement.IStmt;
 import controller.Controller;
 import exceptions.StackException;
 import utils.IHeap;
+import utils.ILock;
 import utils.IStack;
 import utils.MyDict;
 import utils.MyList;
 import utils.MyStack;
+
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 import java.io.BufferedReader;
 import model.value.StringValue;
 import java.lang.reflect.Field;
+import exceptions.LockException;
 
 public class MainWindowController {
   private Controller controller;
@@ -36,6 +41,13 @@ public class MainWindowController {
   private TableColumn<Map.Entry<Integer, IValue>, String> heapAddressColumn;
   @FXML
   private TableColumn<Map.Entry<Integer, IValue>, String> heapValueColumn;
+
+  @FXML
+  private TableView<Map.Entry<Integer, IValue>> lockTableView;
+  @FXML
+  private TableColumn<Map.Entry<Integer, IValue>, String> lockKeyColumn;
+  @FXML
+  private TableColumn<Map.Entry<Integer, IValue>, String> lockValueColumn;
 
   @FXML
   private ListView<String> outputListView;
@@ -72,6 +84,10 @@ public class MainWindowController {
     symTableValueColumn
         .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
 
+    lockKeyColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey().toString()));
+    lockValueColumn
+        .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
+
     prgStateIdentifiersListView.getSelectionModel().selectedItemProperty().addListener(
         (observable, oldValue, newValue) -> {
           if (newValue != null) {
@@ -87,6 +103,7 @@ public class MainWindowController {
 
   private void populateAll() {
     populateHeapTable();
+    populateLockTable();
     populateOutput();
     populateFileTable();
     populatePrgStateIdentifiers();
@@ -100,6 +117,7 @@ public class MainWindowController {
     if (selectedProgram != null) {
       populateExeStack();
       populateSymTable();
+      populateLockTable();
     }
   }
 
@@ -122,6 +140,26 @@ public class MainWindowController {
             }
           }
         });
+  }
+
+  private void populateLockTable() {
+    ILock<Integer, Integer> lock = controller.getRepo().getPrgList().get(0).getLock();
+    ObservableList<Entry<Integer, IValue>> lockEntries = FXCollections.observableArrayList(
+        lock.getValues().stream()
+            .map(key -> new AbstractMap.SimpleEntry<Integer, IValue>(key,
+                controller.getRepo().getPrgList().stream()
+                    .filter(p -> {
+                      try {
+                        return p.getId() == lock.get(key);
+                      } catch (LockException e) {
+                        return false;
+                      }
+                    })
+                    .findFirst()
+                    .map(p -> (IValue) new StringValue(String.valueOf(p.getId())))
+                    .orElse(new StringValue("-"))))
+            .collect(Collectors.toList()));
+    lockTableView.setItems(lockEntries);
   }
 
   private void populateOutput() {
@@ -246,6 +284,7 @@ public class MainWindowController {
     // Force refresh the views to show updated values
     this.symTableView.refresh();
     this.heapTableView.refresh();
+    this.lockTableView.refresh();
 
     if (!programStateLeft) {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
