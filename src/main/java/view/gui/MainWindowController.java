@@ -189,6 +189,18 @@ public class MainWindowController {
       }
     }
     cyclicBarrierTableView.setItems(cyclicBarrierEntries);
+
+    // Add a listener to refresh the cyclic barrier table view whenever its items
+    // change
+    this.cyclicBarrierTableView.getItems()
+        .addListener((
+            javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, Pair<Integer, List<Integer>>>> change) -> {
+          while (change.next()) {
+            if (change.wasUpdated()) {
+              this.cyclicBarrierTableView.refresh();
+            }
+          }
+        });
   }
 
   private void populateFileTable() {
@@ -288,8 +300,9 @@ public class MainWindowController {
     populateAll();
 
     // Force refresh the views to show updated values
-    this.symTableView.refresh();
-    this.heapTableView.refresh();
+    cyclicBarrierTableView.refresh();
+    heapTableView.refresh();
+    symTableView.refresh();
 
     if (!programStateLeft) {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
