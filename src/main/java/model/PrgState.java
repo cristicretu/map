@@ -4,6 +4,7 @@ import utils.IStack;
 import utils.IDict;
 import utils.IHeap;
 import utils.IList;
+import utils.ILockTable;
 import model.statement.IStmt;
 import model.value.IValue;
 import model.value.RefValue;
@@ -65,12 +66,18 @@ public class PrgState {
     return heap;
   }
 
+  private ILockTable lockTable;
+
+  public ILockTable getLockTable() {
+    return lockTable;
+  }
+
   private static synchronized int getNextId() {
     return nextId++;
   }
 
   public PrgState(IStack<IStmt> exeStack, IDict<String, IValue> symTable, IList<IValue> output, IStmt originalProgram,
-      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap) {
+      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap, ILockTable lockTable) {
     this.id = getNextId();
     this.exeStack = exeStack;
     this.symTable = symTable;
@@ -78,6 +85,7 @@ public class PrgState {
     this.originalProgram = originalProgram.deepCopy();
     this.fileTable = fileTable;
     this.heap = heap;
+    this.lockTable = lockTable;
     this.isNotCompleted = true;
     exeStack.push(originalProgram);
   }
@@ -87,7 +95,7 @@ public class PrgState {
     return "PrgState{\n" + "id=" + id + ",\n exeStack=" + exeStack.getList() + ",\n symTable=" + symTable
         + ",\n output=" + output
         + ",\n originalProgram="
-        + originalProgram + ",\n fileTable=" + fileTable + ",\n heap=" + heap + "\n}";
+        + originalProgram + ",\n fileTable=" + fileTable + ",\n heap=" + heap + ",\n lockTable=" + lockTable + "\n}";
   }
 
   public Set<Integer> getUsedAddresses() {

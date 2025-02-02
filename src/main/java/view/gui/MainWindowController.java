@@ -38,6 +38,13 @@ public class MainWindowController {
   private TableColumn<Map.Entry<Integer, IValue>, String> heapValueColumn;
 
   @FXML
+  private TableView<Map.Entry<Integer, Integer>> lockTableView;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Integer>, String> lockLocationColumn;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Integer>, String> lockValueColumn;
+
+  @FXML
   private ListView<String> outputListView;
   @FXML
   private ListView<String> fileTableListView;
@@ -68,6 +75,11 @@ public class MainWindowController {
     heapValueColumn
         .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
 
+    lockLocationColumn
+        .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey().toString()));
+    lockValueColumn
+        .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
+
     symTableVarNameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey()));
     symTableValueColumn
         .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
@@ -87,6 +99,7 @@ public class MainWindowController {
 
   private void populateAll() {
     populateHeapTable();
+    populateLockTable();
     populateOutput();
     populateFileTable();
     populatePrgStateIdentifiers();
@@ -122,6 +135,24 @@ public class MainWindowController {
             }
           }
         });
+  }
+
+  private void populateLockTable() {
+    if (!controller.getRepo().getPrgList().isEmpty()) {
+      var lockTable = controller.getRepo().getPrgList().get(0).getLockTable();
+      ObservableList<Map.Entry<Integer, Integer>> lockEntries = FXCollections.observableArrayList(
+          lockTable.getLockTable().entrySet());
+      lockTableView.setItems(lockEntries);
+
+      this.lockTableView.getItems()
+          .addListener((javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, Integer>> change) -> {
+            while (change.next()) {
+              if (change.wasUpdated()) {
+                this.lockTableView.refresh();
+              }
+            }
+          });
+    }
   }
 
   private void populateOutput() {
@@ -246,6 +277,7 @@ public class MainWindowController {
     // Force refresh the views to show updated values
     this.symTableView.refresh();
     this.heapTableView.refresh();
+    this.lockTableView.refresh();
 
     if (!programStateLeft) {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -253,6 +285,7 @@ public class MainWindowController {
       alert.setHeaderText(null);
       alert.setContentText("Program execution finished!");
       alert.showAndWait();
+      runOneStepButton.setDisable(true);
     }
   }
 }

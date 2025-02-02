@@ -30,6 +30,14 @@
 
             <Label text="FileTable"/>
             <ListView fx:id="fileTableListView" VBox.vgrow="ALWAYS"/>
+
+            <Label text="LockTable"/>
+            <TableView fx:id="lockTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="lockLocationColumn" text="Location"/>
+                    <TableColumn fx:id="lockValueColumn" text="Value"/>
+                </columns>
+            </TableView>
         </VBox>
 
         <VBox spacing="10" HBox.hgrow="ALWAYS">
