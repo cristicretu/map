@@ -4,14 +4,17 @@ import utils.IStack;
 import utils.IDict;
 import utils.IHeap;
 import utils.IList;
+import utils.ISemaphore;
 import model.statement.IStmt;
 import model.value.IValue;
 import model.value.RefValue;
 import model.value.StringValue;
+import javafx.util.Pair;
 
 import java.io.BufferedReader;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.List;
 
 import exceptions.MyException;
 import exceptions.StackException;
@@ -65,12 +68,19 @@ public class PrgState {
     return heap;
   }
 
+  private ISemaphore<Integer, Pair<Integer, List<Integer>>> semaphoreTable;
+
+  public ISemaphore<Integer, Pair<Integer, List<Integer>>> getSemaphoreTable() {
+    return semaphoreTable;
+  }
+
   private static synchronized int getNextId() {
     return nextId++;
   }
 
   public PrgState(IStack<IStmt> exeStack, IDict<String, IValue> symTable, IList<IValue> output, IStmt originalProgram,
-      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap) {
+      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap,
+      ISemaphore<Integer, Pair<Integer, List<Integer>>> semaphoreTable) {
     this.id = getNextId();
     this.exeStack = exeStack;
     this.symTable = symTable;
@@ -78,6 +88,7 @@ public class PrgState {
     this.originalProgram = originalProgram.deepCopy();
     this.fileTable = fileTable;
     this.heap = heap;
+    this.semaphoreTable = semaphoreTable;
     this.isNotCompleted = true;
     exeStack.push(originalProgram);
   }
@@ -87,7 +98,8 @@ public class PrgState {
     return "PrgState{\n" + "id=" + id + ",\n exeStack=" + exeStack.getList() + ",\n symTable=" + symTable
         + ",\n output=" + output
         + ",\n originalProgram="
-        + originalProgram + ",\n fileTable=" + fileTable + ",\n heap=" + heap + "\n}";
+        + originalProgram + ",\n fileTable=" + fileTable + ",\n heap=" + heap
+        + ",\n semaphoreTable=" + semaphoreTable + "\n}";
   }
 
   public Set<Integer> getUsedAddresses() {

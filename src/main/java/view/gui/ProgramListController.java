@@ -23,6 +23,9 @@ import model.statement.ForkStmt;
 import model.statement.OpenRFile;
 import model.statement.ReadFile;
 import model.statement.CloseRFile;
+import model.statement.CreateSemaphoreStmt;
+import model.statement.AcquireStmt;
+import model.statement.ReleaseStmt;
 import model.exp.VariableExp;
 import model.exp.ArithExp;
 import model.exp.RelExp;
@@ -43,6 +46,7 @@ import utils.MyStack;
 import utils.MyDict;
 import utils.MyList;
 import utils.MyHeap;
+import utils.MySemaphore;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -242,6 +246,61 @@ public class ProgramListController {
                                 new VariableExp("a")))))))));
     programs.add(prog10);
 
+    // Example with semaphores
+    // Ref int v1; int cnt;
+    // new(v1,1);createSemaphore(cnt,rH(v1));
+    // fork(acquire(cnt);wh(v1,rh(v1)*10));print(rh(v1));release(cnt));
+    // fork(acquire(cnt);wh(v1,rh(v1)*10));wh(v1,rh(v1)*2));print(rh(v1));release(cnt));
+    // acquire(cnt);
+    // print(rh(v1)-1);
+    // release(cnt)
+    IStmt prog11 = new CompStmt(
+        new VarDeclStmt("v1", new RefType(new IntType())),
+        new CompStmt(
+            new VarDeclStmt("cnt", new IntType()),
+            new CompStmt(
+                new NewStmt("v1", new ConstantValue(new IntValue(1))),
+                new CompStmt(
+                    new CreateSemaphoreStmt("cnt", new RefExp(new VariableExp("v1"))),
+                    new CompStmt(
+                        new ForkStmt(
+                            new CompStmt(
+                                new AcquireStmt("cnt"),
+                                new CompStmt(
+                                    new WriteHeapStmt("v1",
+                                        new ArithExp('*',
+                                            new RefExp(new VariableExp("v1")),
+                                            new ConstantValue(new IntValue(10)))),
+                                    new CompStmt(
+                                        new PrintStmt(new RefExp(new VariableExp("v1"))),
+                                        new ReleaseStmt("cnt"))))),
+                        new CompStmt(
+                            new ForkStmt(
+                                new CompStmt(
+                                    new AcquireStmt("cnt"),
+                                    new CompStmt(
+                                        new WriteHeapStmt("v1",
+                                            new ArithExp('*',
+                                                new RefExp(new VariableExp("v1")),
+                                                new ConstantValue(new IntValue(10)))),
+                                        new CompStmt(
+                                            new WriteHeapStmt("v1",
+                                                new ArithExp('*',
+                                                    new RefExp(new VariableExp("v1")),
+                                                    new ConstantValue(new IntValue(2)))),
+                                            new CompStmt(
+                                                new PrintStmt(new RefExp(new VariableExp("v1"))),
+                                                new ReleaseStmt("cnt")))))),
+                            new CompStmt(
+                                new AcquireStmt("cnt"),
+                                new CompStmt(
+                                    new PrintStmt(
+                                        new ArithExp('-',
+                                            new RefExp(new VariableExp("v1")),
+                                            new ConstantValue(new IntValue(1)))),
+                                    new ReleaseStmt("cnt")))))))));
+    programs.add(prog11);
+
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
       programStrings.add(stmt.toString());
@@ -272,7 +331,8 @@ public class ProgramListController {
           new MyList<>(),
           program,
           new MyDict<>(),
-          new MyHeap<>());
+          new MyHeap<>(),
+          new MySemaphore());
 
       IRepository repo = new Repository(prgState, "log" + (index + 1) + ".txt");
       Controller controller = new Controller(repo);

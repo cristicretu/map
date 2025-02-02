@@ -15,6 +15,8 @@ import utils.IStack;
 import utils.MyDict;
 import utils.MyList;
 import utils.MyStack;
+import utils.ISemaphore;
+import javafx.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +58,15 @@ public class MainWindowController {
   @FXML
   private Button runOneStepButton;
 
+  @FXML
+  private TableView<Map.Entry<Integer, Pair<Integer, List<Integer>>>> semaphoreTableView;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Pair<Integer, List<Integer>>>, String> semaphoreIndexColumn;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Pair<Integer, List<Integer>>>, String> semaphoreValueColumn;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Pair<Integer, List<Integer>>>, String> semaphoreListColumn;
+
   public void setController(Controller controller) {
     this.controller = controller;
     populateAll();
@@ -71,6 +82,14 @@ public class MainWindowController {
     symTableVarNameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey()));
     symTableValueColumn
         .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
+
+    semaphoreIndexColumn
+        .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey().toString()));
+    semaphoreValueColumn
+        .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().getKey().toString()));
+    semaphoreListColumn
+        .setCellValueFactory(
+            cellData -> new SimpleStringProperty(cellData.getValue().getValue().getValue().toString()));
 
     prgStateIdentifiersListView.getSelectionModel().selectedItemProperty().addListener(
         (observable, oldValue, newValue) -> {
@@ -91,6 +110,7 @@ public class MainWindowController {
     populateFileTable();
     populatePrgStateIdentifiers();
     populateNumberOfPrgStates();
+    populateSemaphoreTable();
 
     if (selectedProgram == null && !controller.getRepo().getPrgList().isEmpty()) {
       selectedProgram = controller.getRepo().getPrgList().get(0);
@@ -227,6 +247,28 @@ public class MainWindowController {
             }
           }
         });
+  }
+
+  private void populateSemaphoreTable() {
+    if (!controller.getRepo().getPrgList().isEmpty()) {
+      ISemaphore<Integer, Pair<Integer, List<Integer>>> semaphoreTable = controller.getRepo().getPrgList().get(0)
+          .getSemaphoreTable();
+      ObservableList<Map.Entry<Integer, Pair<Integer, List<Integer>>>> semaphoreEntries = FXCollections
+          .observableArrayList(
+              semaphoreTable.getContent().entrySet());
+      semaphoreTableView.setItems(semaphoreEntries);
+
+      // Add a listener to refresh the semaphore table view whenever its items change
+      this.semaphoreTableView.getItems()
+          .addListener((
+              javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, Pair<Integer, List<Integer>>>> change) -> {
+            while (change.next()) {
+              if (change.wasUpdated()) {
+                this.semaphoreTableView.refresh();
+              }
+            }
+          });
+    }
   }
 
   @FXML
