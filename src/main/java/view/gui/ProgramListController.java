@@ -322,6 +322,85 @@ public class ProgramListController {
 
     programs.add(lockExample);
 
+    IStmt lockExample2 = new CompStmt(
+        new VarDeclStmt("v1", new RefType(new IntType())),
+        new CompStmt(
+            new VarDeclStmt("v2", new RefType(new IntType())),
+            new CompStmt(
+                new NewStmt("v1", new ConstantValue(new IntValue(20))),
+                new CompStmt(
+                    new NewStmt("v2", new ConstantValue(new IntValue(30))),
+                    new CompStmt(
+                        new VarDeclStmt("x", new IntType()),
+                        new CompStmt(
+                            new NewLockStmt("x"),
+                            new CompStmt(
+                                new ForkStmt(
+                                    new CompStmt(
+                                        new ForkStmt(
+                                            new CompStmt(
+                                                new LockStmt("x"),
+                                                new CompStmt(
+                                                    new WriteHeapStmt("v1",
+                                                        new ArithExp('-',
+                                                            new RefExp(new VariableExp("v1")),
+                                                            new ConstantValue(new IntValue(1)))),
+                                                    new UnlockStmt("x")))),
+                                        new CompStmt(
+                                            new LockStmt("x"),
+                                            new CompStmt(
+                                                new WriteHeapStmt("v1",
+                                                    new ArithExp('+',
+                                                        new RefExp(new VariableExp("v1")),
+                                                        new ConstantValue(new IntValue(1)))),
+                                                new UnlockStmt("x"))))),
+                                new CompStmt(
+                                    new ForkStmt(
+                                        new CompStmt(
+                                            new ForkStmt(
+                                                new CompStmt(
+                                                    new WriteHeapStmt("v2",
+                                                        new ArithExp('+',
+                                                            new RefExp(new VariableExp("v2")),
+                                                            new ConstantValue(new IntValue(1)))),
+                                                    new UnlockStmt("x"))),
+                                            new CompStmt(
+                                                new WriteHeapStmt("v2",
+                                                    new ArithExp('+',
+                                                        new RefExp(new VariableExp("v2")),
+                                                        new ConstantValue(new IntValue(1)))),
+                                                new UnlockStmt("x")))),
+                                    new CompStmt(
+                                        new NoOPStmt(),
+                                        new CompStmt(
+                                            new NoOPStmt(),
+                                            new CompStmt(
+                                                new NoOPStmt(),
+                                                new CompStmt(
+                                                    new NoOPStmt(),
+                                                    new CompStmt(
+                                                        new NoOPStmt(),
+                                                        new CompStmt(
+                                                            new NoOPStmt(),
+                                                            new CompStmt(
+                                                                new NoOPStmt(),
+                                                                new CompStmt(
+                                                                    new NoOPStmt(),
+                                                                    new CompStmt(
+                                                                        new NoOPStmt(),
+                                                                        new CompStmt(
+                                                                            new NoOPStmt(),
+                                                                            new CompStmt(
+                                                                                new NoOPStmt(),
+                                                                                new CompStmt(
+                                                                                    new PrintStmt(new RefExp(
+                                                                                        new VariableExp("v1"))),
+                                                                                    new PrintStmt(
+                                                                                        new RefExp(new VariableExp(
+                                                                                            "v2")))))))))))))))))))))));
+
+    programs.add(lockExample2);
+
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
       programStrings.add(stmt.toString());
