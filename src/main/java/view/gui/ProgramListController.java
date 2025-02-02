@@ -11,6 +11,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.Alert;
 import model.statement.IStmt;
 import model.statement.CompStmt;
+import model.statement.ForStmt;
 import model.statement.AssignStmt;
 import model.statement.PrintStmt;
 import model.statement.IfStmt;
@@ -245,6 +246,20 @@ public class ProgramListController {
                             new PrintStmt(new RefExp(
                                 new VariableExp("a")))))))));
     programs.add(prog10);
+
+    // Ref int a; new(a,20);
+    // (for(v=0;v<3;v=v+1) fork(print(v);v=v*rh(a)));
+    // print(rh(a))
+    // The final Out should be {0,1,2,20}
+    IStmt forProg = new CompStmt(new VarDeclStmt("a", new RefType(new IntType())),
+        new CompStmt(new NewStmt("a", new ConstantValue(new IntValue(20))),
+            new CompStmt(new ForStmt("v", new ConstantValue(new IntValue(0)),
+                new ConstantValue(new IntValue(2)),
+                new ArithExp('+', new VariableExp("v"), new ConstantValue(new IntValue(1))),
+                new ForkStmt(new CompStmt(new PrintStmt(new VariableExp("v")),
+                    new AssignStmt("v", new ArithExp('*', new VariableExp("v"), new RefExp(new VariableExp("a"))))))),
+                new PrintStmt(new RefExp(new VariableExp("a"))))));
+    programs.add(forProg);
 
     // Lock mechanism example program
     IStmt lockExample = new CompStmt(
