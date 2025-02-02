@@ -23,6 +23,8 @@ import model.statement.ForkStmt;
 import model.statement.OpenRFile;
 import model.statement.ReadFile;
 import model.statement.CloseRFile;
+import model.statement.ProcedureStmt;
+import model.statement.CallStmt;
 import model.exp.VariableExp;
 import model.exp.ArithExp;
 import model.exp.RelExp;
@@ -45,6 +47,7 @@ import utils.MyList;
 import utils.MyHeap;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 public class ProgramListController {
   @FXML
@@ -241,6 +244,59 @@ public class ProgramListController {
                             new PrintStmt(new RefExp(
                                 new VariableExp("a")))))))));
     programs.add(prog10);
+
+    // Example 11: Procedures example
+    // procedure sum(a,b) v=a+b;print(v)
+    // procedure product(a,b) v=a*b;print(v)
+    // v=2;w=5;call sum(v*10,w);print(v);
+    // fork(call product(v,w));
+    // fork(call sum(v,w))
+    IStmt sumProc = new ProcedureStmt(
+        "sum",
+        Arrays.asList("a", "b"),
+        new CompStmt(
+            new VarDeclStmt("v", new IntType()),
+            new CompStmt(
+                new AssignStmt("v", new ArithExp('+', new VariableExp("a"), new VariableExp("b"))),
+                new PrintStmt(new VariableExp("v")))));
+
+    IStmt productProc = new ProcedureStmt(
+        "product",
+        Arrays.asList("a", "b"),
+        new CompStmt(
+            new VarDeclStmt("v", new IntType()),
+            new CompStmt(
+                new AssignStmt("v", new ArithExp('*', new VariableExp("a"), new VariableExp("b"))),
+                new PrintStmt(new VariableExp("v")))));
+
+    IStmt mainProgram = new CompStmt(
+        new CompStmt(sumProc, productProc),
+        new CompStmt(
+            new CompStmt(
+                new VarDeclStmt("v", new IntType()),
+                new CompStmt(
+                    new VarDeclStmt("w", new IntType()),
+                    new CompStmt(
+                        new AssignStmt("v", new ConstantValue(new IntValue(2))),
+                        new AssignStmt("w", new ConstantValue(new IntValue(5)))))),
+            new CompStmt(
+                new CallStmt(
+                    "sum",
+                    Arrays.asList(
+                        new ArithExp('*', new VariableExp("v"), new ConstantValue(new IntValue(10))),
+                        new VariableExp("w"))),
+                new CompStmt(
+                    new PrintStmt(new VariableExp("v")),
+                    new CompStmt(
+                        new ForkStmt(
+                            new CallStmt(
+                                "product",
+                                Arrays.asList(new VariableExp("v"), new VariableExp("w")))),
+                        new ForkStmt(
+                            new CallStmt(
+                                "sum",
+                                Arrays.asList(new VariableExp("v"), new VariableExp("w")))))))));
+    programs.add(mainProgram);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
