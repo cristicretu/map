@@ -30,6 +30,15 @@
 
             <Label text="FileTable"/>
             <ListView fx:id="fileTableListView" VBox.vgrow="ALWAYS"/>
+
+            <Label text="ProcedureTable"/>
+            <TableView fx:id="procTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="procNameColumn" text="Procedure Name"/>
+                    <TableColumn fx:id="procParamsColumn" text="Parameters"/>
+                    <TableColumn fx:id="procBodyColumn" text="Body"/>
+                </columns>
+            </TableView>
         </VBox>
 
         <VBox spacing="10" HBox.hgrow="ALWAYS">

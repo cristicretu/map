@@ -15,6 +15,7 @@ import utils.IStack;
 import utils.MyDict;
 import utils.MyList;
 import utils.MyStack;
+import utils.ProcTuple;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +57,15 @@ public class MainWindowController {
   @FXML
   private Button runOneStepButton;
 
+  @FXML
+  private TableView<Map.Entry<String, ProcTuple<List<String>, IStmt>>> procTableView;
+  @FXML
+  private TableColumn<Map.Entry<String, ProcTuple<List<String>, IStmt>>, String> procNameColumn;
+  @FXML
+  private TableColumn<Map.Entry<String, ProcTuple<List<String>, IStmt>>, String> procParamsColumn;
+  @FXML
+  private TableColumn<Map.Entry<String, ProcTuple<List<String>, IStmt>>, String> procBodyColumn;
+
   public void setController(Controller controller) {
     this.controller = controller;
     populateAll();
@@ -72,6 +82,12 @@ public class MainWindowController {
     symTableValueColumn
         .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
 
+    procNameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey()));
+    procParamsColumn.setCellValueFactory(
+        cellData -> new SimpleStringProperty(cellData.getValue().getValue().getFirst().toString()));
+    procBodyColumn.setCellValueFactory(
+        cellData -> new SimpleStringProperty(cellData.getValue().getValue().getSecond().toString()));
+
     prgStateIdentifiersListView.getSelectionModel().selectedItemProperty().addListener(
         (observable, oldValue, newValue) -> {
           if (newValue != null) {
@@ -86,11 +102,12 @@ public class MainWindowController {
   }
 
   private void populateAll() {
+    populateNumberOfPrgStates();
     populateHeapTable();
     populateOutput();
     populateFileTable();
     populatePrgStateIdentifiers();
-    populateNumberOfPrgStates();
+    populateProcTable();
 
     if (selectedProgram == null && !controller.getRepo().getPrgList().isEmpty()) {
       selectedProgram = controller.getRepo().getPrgList().get(0);
@@ -224,6 +241,41 @@ public class MainWindowController {
           while (change.next()) {
             if (change.wasUpdated()) {
               this.symTableView.refresh();
+            }
+          }
+        });
+  }
+
+  private void populateProcTable() {
+    ObservableList<Map.Entry<String, ProcTuple<List<String>, IStmt>>> procTableEntries = FXCollections
+        .observableArrayList();
+    if (selectedProgram != null) {
+      MyDict<String, ProcTuple<List<String>, IStmt>> procTable = (MyDict<String, ProcTuple<List<String>, IStmt>>) selectedProgram
+          .getProcTable();
+      try {
+        Field dictField = MyDict.class.getDeclaredField("dict");
+        dictField.setAccessible(true);
+        @SuppressWarnings("unchecked")
+        Map<String, ProcTuple<List<String>, IStmt>> dict = (Map<String, ProcTuple<List<String>, IStmt>>) dictField
+            .get(procTable);
+        procTableEntries.addAll(dict.entrySet());
+      } catch (NoSuchFieldException | IllegalAccessException e) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText("Error accessing procedure table: " + e.getMessage());
+        alert.showAndWait();
+      }
+    }
+    procTableView.setItems(procTableEntries);
+
+    // Add a listener to refresh the procedure table view whenever its items change
+    this.procTableView.getItems()
+        .addListener((
+            javafx.collections.ListChangeListener.Change<? extends Map.Entry<String, ProcTuple<List<String>, IStmt>>> change) -> {
+          while (change.next()) {
+            if (change.wasUpdated()) {
+              this.procTableView.refresh();
             }
           }
         });
