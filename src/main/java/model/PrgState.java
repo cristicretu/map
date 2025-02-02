@@ -1,9 +1,11 @@
 package model;
 
 import utils.IStack;
+import utils.Tuple;
 import utils.IDict;
 import utils.IHeap;
 import utils.IList;
+import utils.ISem;
 import model.statement.IStmt;
 import model.value.IValue;
 import model.value.RefValue;
@@ -11,6 +13,7 @@ import model.value.StringValue;
 
 import java.io.BufferedReader;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import exceptions.MyException;
@@ -69,8 +72,15 @@ public class PrgState {
     return nextId++;
   }
 
+  private ISem<Integer, Tuple<Integer, List<Integer>, Integer>> semaphore;
+
+  public ISem<Integer, Tuple<Integer, List<Integer>, Integer>> getSemaphore() {
+    return semaphore;
+  }
+
   public PrgState(IStack<IStmt> exeStack, IDict<String, IValue> symTable, IList<IValue> output, IStmt originalProgram,
-      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap) {
+      IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, IValue> heap,
+      ISem<Integer, Tuple<Integer, List<Integer>, Integer>> semaphore) {
     this.id = getNextId();
     this.exeStack = exeStack;
     this.symTable = symTable;
@@ -78,6 +88,7 @@ public class PrgState {
     this.originalProgram = originalProgram.deepCopy();
     this.fileTable = fileTable;
     this.heap = heap;
+    this.semaphore = semaphore;
     this.isNotCompleted = true;
     exeStack.push(originalProgram);
   }
@@ -87,7 +98,8 @@ public class PrgState {
     return "PrgState{\n" + "id=" + id + ",\n exeStack=" + exeStack.getList() + ",\n symTable=" + symTable
         + ",\n output=" + output
         + ",\n originalProgram="
-        + originalProgram + ",\n fileTable=" + fileTable + ",\n heap=" + heap + "\n}";
+        + originalProgram + ",\n fileTable=" + fileTable + ",\n heap=" + heap + ",\n semaphore=" + semaphore
+        + "\n}";
   }
 
   public Set<Integer> getUsedAddresses() {

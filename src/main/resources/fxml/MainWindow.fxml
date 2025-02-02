@@ -25,6 +25,15 @@
                 </columns>
             </TableView>
 
+            <Label text="SemaphoreTable"/>
+            <TableView fx:id="semaphoreTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="semaphoreIndexColumn" text="Index"/>
+                    <TableColumn fx:id="semaphoreValueColumn" text="Value"/>
+                    <TableColumn fx:id="semaphoreListColumn" text="List"/>
+                </columns>
+            </TableView>
+
             <Label text="Output"/>
             <ListView fx:id="outputListView" VBox.vgrow="ALWAYS"/>
 

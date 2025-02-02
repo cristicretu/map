@@ -11,10 +11,13 @@ import model.statement.IStmt;
 import controller.Controller;
 import exceptions.StackException;
 import utils.IHeap;
+import utils.ISem;
 import utils.IStack;
 import utils.MyDict;
 import utils.MyList;
 import utils.MyStack;
+import utils.Tuple;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -54,6 +57,15 @@ public class MainWindowController {
   private TableColumn<Map.Entry<String, IValue>, String> symTableValueColumn;
 
   @FXML
+  TableView<Map.Entry<Integer, Tuple<Integer, List<Integer>, Integer>>> semaphoreTableView;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Tuple<Integer, List<Integer>, Integer>>, String> semaphoreIndexColumn;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Tuple<Integer, List<Integer>, Integer>>, String> semaphoreValueColumn;
+  @FXML
+  private TableColumn<Map.Entry<Integer, Tuple<Integer, List<Integer>, Integer>>, String> semaphoreListColumn;
+
+  @FXML
   private Button runOneStepButton;
 
   public void setController(Controller controller) {
@@ -71,6 +83,15 @@ public class MainWindowController {
     symTableVarNameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey()));
     symTableValueColumn
         .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getValue().toString()));
+
+    semaphoreIndexColumn
+        .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKey().toString()));
+    semaphoreValueColumn
+        .setCellValueFactory(
+            cellData -> new SimpleStringProperty(cellData.getValue().getValue().getFirst().toString()));
+    semaphoreListColumn
+        .setCellValueFactory(
+            cellData -> new SimpleStringProperty(cellData.getValue().getValue().getSecond().toString()));
 
     prgStateIdentifiersListView.getSelectionModel().selectedItemProperty().addListener(
         (observable, oldValue, newValue) -> {
@@ -91,7 +112,7 @@ public class MainWindowController {
     populateFileTable();
     populatePrgStateIdentifiers();
     populateNumberOfPrgStates();
-
+    populateSemaphoreTable();
     if (selectedProgram == null && !controller.getRepo().getPrgList().isEmpty()) {
       selectedProgram = controller.getRepo().getPrgList().get(0);
       prgStateIdentifiersListView.getSelectionModel().select(0);
@@ -229,6 +250,27 @@ public class MainWindowController {
         });
   }
 
+  private void populateSemaphoreTable() {
+    if (!controller.getRepo().getPrgList().isEmpty()) {
+      ISem<Integer, Tuple<Integer, List<Integer>, Integer>> semTable = controller.getRepo().getPrgList().get(0)
+          .getSemaphore();
+      ObservableList<Map.Entry<Integer, Tuple<Integer, List<Integer>, Integer>>> semaphoreEntries = FXCollections
+          .observableArrayList(
+              semTable.getContent().entrySet());
+      semaphoreTableView.setItems(semaphoreEntries);
+
+      this.semaphoreTableView.getItems()
+          .addListener((
+              javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, Tuple<Integer, List<Integer>, Integer>>> change) -> {
+            while (change.next()) {
+              if (change.wasUpdated()) {
+                this.semaphoreTableView.refresh();
+              }
+            }
+          });
+    }
+  }
+
   @FXML
   private void runOneStep() {
     if (controller == null) {
@@ -246,6 +288,7 @@ public class MainWindowController {
     // Force refresh the views to show updated values
     this.symTableView.refresh();
     this.heapTableView.refresh();
+    this.semaphoreTableView.refresh();
 
     if (!programStateLeft) {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
