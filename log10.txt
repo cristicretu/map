@@ -1348,3 +1348,2137 @@ id=10,
  heap=1 -> 30
 
 }
+PrgState{
+id=0,
+ exeStack=[(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[Ref(Int) v1, (Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[Ref(Int) v1, (Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))],
+ symTable={v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))],
+ symTable={v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[Int cnt, (NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))],
+ symTable={v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[Int cnt, (NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))],
+ symTable={v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))],
+ symTable={cnt=0, v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))],
+ symTable={cnt=0, v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[NewStmt(v1, 1), (createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))],
+ symTable={cnt=0, v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[NewStmt(v1, 1), (createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))],
+ symTable={cnt=0, v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[createSemaphore(cnt, RefExp(v1)), (fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[createSemaphore(cnt, RefExp(v1)), (fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt))))), (fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt))))), (fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))))), (acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))))), (acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 10), (print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 10), (print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[(print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[(print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[print(RefExp(v1)), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[print(RefExp(v1)), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[print(RefExp(v1) - 1), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[print(RefExp(v1) - 1), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 10), (WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 10), (WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 100
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 100
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 2), (print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 100
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 2), (print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 100
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[(print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[(print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[print(RefExp(v1)), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[print(RefExp(v1)), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@466eb9d5
+}
+PrgState{
+id=0,
+ exeStack=[(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[Ref(Int) v1, (Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[Ref(Int) v1, (Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))],
+ symTable={v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))],
+ symTable={v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[Int cnt, (NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))],
+ symTable={v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[Int cnt, (NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))],
+ symTable={v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))],
+ symTable={cnt=0, v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))))],
+ symTable={cnt=0, v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[NewStmt(v1, 1), (createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))],
+ symTable={cnt=0, v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[NewStmt(v1, 1), (createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))],
+ symTable={cnt=0, v1=RefValue(0, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[createSemaphore(cnt, RefExp(v1)), (fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[createSemaphore(cnt, RefExp(v1)), (fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt))))), (fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt))))), (fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))))), (acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))))), (acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(acquire(cnt);(print(RefExp(v1) - 1);release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 10), (print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 10), (print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 1
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[(print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[(print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[print(RefExp(v1)), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[print(RefExp(v1)), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[acquire(cnt), (print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[(print(RefExp(v1) - 1);release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[print(RefExp(v1) - 1), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[print(RefExp(v1) - 1), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[acquire(cnt), (WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(Ref(Int) v1;(Int cnt;(NewStmt(v1, 1);(createSemaphore(cnt, RefExp(v1));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(print(RefExp(v1));release(cnt)))));(fork((acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))));(acquire(cnt);(print(RefExp(v1) - 1);release(cnt))))))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 10), (WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 10), (WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 10
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 100
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt)))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 100
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 2), (print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 100
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[WriteHeapStmt(v1, RefExp(v1) * 2), (print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 100
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[(print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[(print(RefExp(v1));release(cnt))],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[print(RefExp(v1)), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[print(RefExp(v1)), release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[release(cnt)],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={cnt=0, v1=RefValue(1, Int)},
+ output=[10, 9, 200],
+ originalProgram=(acquire(cnt);(WriteHeapStmt(v1, RefExp(v1) * 10);(WriteHeapStmt(v1, RefExp(v1) * 2);(print(RefExp(v1));release(cnt))))),
+ fileTable={},
+ heap=1 -> 200
+,
+ semaphoreTable=utils.MySemaphore@61cbc313
+}

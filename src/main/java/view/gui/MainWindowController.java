@@ -288,6 +288,7 @@ public class MainWindowController {
     // Force refresh the views to show updated values
     this.symTableView.refresh();
     this.heapTableView.refresh();
+    this.semaphoreTableView.refresh();
 
     if (!programStateLeft) {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
