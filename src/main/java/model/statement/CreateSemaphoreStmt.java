@@ -23,12 +23,12 @@ public class CreateSemaphoreStmt implements IStmt {
   }
 
   @Override
-  public PrgState execute(PrgState state) throws MyException {
-    var symTable = state.getSymTable();
-    var semaphoreTable = state.getSemaphoreTable();
+  public PrgState execute(PrgState prg) throws MyException {
+    var symTable = prg.getSymTable();
+    var semaphoreTable = prg.getSemaphoreTable();
 
     try {
-      IValue expValue = exp.eval(symTable, state.getHeap());
+      IValue expValue = exp.eval(symTable, prg.getHeap());
       if (!expValue.getType().equals(new IntType())) {
         throw new MyException("Expression must evaluate to an integer");
       }

@@ -255,7 +255,6 @@ public class MainWindowController {
           .observableArrayList(
               semaphoreTable.getContent().entrySet());
       semaphoreTableView.setItems(semaphoreEntries);
-
       this.semaphoreTableView.getItems()
           .addListener((
               javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, Pair<Integer, List<Integer>>>> change) -> {

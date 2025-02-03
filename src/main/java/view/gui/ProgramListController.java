@@ -246,14 +246,7 @@ public class ProgramListController {
                             new PrintStmt(new RefExp(
                                 new VariableExp("a")))))))));
     programs.add(prog10);
-
-    // int a; int b; int c;
-    // a=1;b=2;c=5;
-    // (switch(a*10)
-    // (case (b*c) : print(a);print(b))
-    // (case (10) : print(100);print(200))
-    // (default : print(300)));
-    // print(300)
+    ///////////////////////////////////////////
 
     IStmt swici = new CompStmt(new VarDeclStmt("a", new IntType()),
         new CompStmt(new VarDeclStmt("b", new IntType()),
@@ -279,32 +272,40 @@ public class ProgramListController {
                                     new PrintStmt(
                                         new ConstantValue(new IntValue(300)))),
                                 new PrintStmt(
-                                    new ConstantValue(new IntValue(300))))))))));
+                                    new ConstantValue(new IntValue(300))))
+
+                        )
+
+                    )
+
+                )
+
+            )
+
+        )
+
+    );
 
     programs.add(swici);
 
-    // Ref int v1; int cnt;
-    // new(v1,1);createSemaphore(cnt,rH(v1));
-    // fork(acquire(cnt);wh(v1,rh(v1)*10));print(rh(v1));release(cnt));
-    // fork(acquire(cnt);wh(v1,rh(v1)*10));wh(v1,rh(v1)*2));print(rh(v1));release(cnt));
-    // acquire(cnt);
-    // print(rh(v1)-1);
-    // release(cnt)
-    IStmt prog11 = new CompStmt(
+    IStmt sem = new CompStmt(
         new VarDeclStmt("v1", new RefType(new IntType())),
         new CompStmt(
             new VarDeclStmt("cnt", new IntType()),
             new CompStmt(
                 new NewStmt("v1", new ConstantValue(new IntValue(1))),
                 new CompStmt(
+
                     new CreateSemaphoreStmt("cnt", new RefExp(new VariableExp("v1"))),
                     new CompStmt(
                         new ForkStmt(
+
                             new CompStmt(
                                 new AcquireStmt("cnt"),
                                 new CompStmt(
                                     new WriteHeapStmt("v1",
                                         new ArithExp('*',
+
                                             new RefExp(
                                                 new VariableExp("v1")),
                                             new ConstantValue(
@@ -312,7 +313,14 @@ public class ProgramListController {
                                     new CompStmt(
                                         new PrintStmt(new RefExp(
                                             new VariableExp("v1"))),
-                                        new ReleaseStmt("cnt"))))),
+                                        new ReleaseStmt("cnt"))
+
+                                )
+
+                            )
+
+                        ),
+
                         new CompStmt(
                             new ForkStmt(
                                 new CompStmt(
@@ -341,7 +349,15 @@ public class ProgramListController {
                                                         new VariableExp(
                                                             "v1"))),
                                                 new ReleaseStmt(
-                                                    "cnt")))))),
+                                                    "cnt"))
+
+                                        )
+
+                                    )
+
+                                )
+
+                            ),
                             new CompStmt(
                                 new AcquireStmt("cnt"),
                                 new CompStmt(
@@ -350,9 +366,22 @@ public class ProgramListController {
                                             new RefExp(
                                                 new VariableExp("v1")),
                                             new ConstantValue(
-                                                new IntValue(1)))),
-                                    new ReleaseStmt("cnt")))))))));
-    programs.add(prog11);
+                                                new IntValue(1))
+
+                                        )),
+
+                                    new ReleaseStmt("cnt")
+
+                                )
+
+                            )
+
+                        )))
+
+            )
+
+        ));
+    programs.add(sem);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {

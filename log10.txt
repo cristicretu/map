@@ -438,3 +438,923 @@ id=0,
 ,
  semaphoreTable=utils.MySemaphore@f47f904
 }
+PrgState{
+id=0,
+ exeStack=[(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[Int a, (Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[Int a, (Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))],
+ symTable={a=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))],
+ symTable={a=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[Int b, (Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))],
+ symTable={a=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[Int b, (Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))],
+ symTable={a=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))],
+ symTable={a=0, b=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))],
+ symTable={a=0, b=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[Int c, (a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))],
+ symTable={a=0, b=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[Int c, (a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))],
+ symTable={a=0, b=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))],
+ symTable={a=0, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))],
+ symTable={a=0, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[a = 1, (b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))],
+ symTable={a=0, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[a = 1, (b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))],
+ symTable={a=0, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))],
+ symTable={a=1, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))],
+ symTable={a=1, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[b = 2, (c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))],
+ symTable={a=1, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[b = 2, (c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))],
+ symTable={a=1, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))],
+ symTable={a=1, b=2, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))],
+ symTable={a=1, b=2, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[c = 5, (switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))],
+ symTable={a=1, b=2, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[c = 5, (switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))],
+ symTable={a=1, b=2, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300)), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300)), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[if (relExp(a * 10==b * c);) then ((print(a);print(b))) else (if (relExp(a * 10==10);) then ((print(100);print(200))) else (print(300))), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[if (relExp(a * 10==b * c);) then ((print(a);print(b))) else (if (relExp(a * 10==10);) then ((print(100);print(200))) else (print(300))), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(print(a);print(b)), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(print(a);print(b)), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[print(a), print(b), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[print(a), print(b), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[print(b), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[1],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[print(b), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[1],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2, 300],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2, 300],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2, 300],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=utils.MySemaphore@5294c1f8
+}
+PrgState{
+id=0,
+ exeStack=[(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[Int a, (Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[Int a, (Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))],
+ symTable={a=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))],
+ symTable={a=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[Int b, (Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))],
+ symTable={a=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[Int b, (Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))],
+ symTable={a=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))],
+ symTable={a=0, b=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))))],
+ symTable={a=0, b=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[Int c, (a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))],
+ symTable={a=0, b=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[Int c, (a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))],
+ symTable={a=0, b=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))],
+ symTable={a=0, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))],
+ symTable={a=0, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[a = 1, (b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))],
+ symTable={a=0, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[a = 1, (b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))],
+ symTable={a=0, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))],
+ symTable={a=1, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))))],
+ symTable={a=1, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[b = 2, (c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))],
+ symTable={a=1, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[b = 2, (c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))],
+ symTable={a=1, b=0, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))],
+ symTable={a=1, b=2, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))],
+ symTable={a=1, b=2, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[c = 5, (switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))],
+ symTable={a=1, b=2, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[c = 5, (switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))],
+ symTable={a=1, b=2, c=0},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300))],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300)), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300)), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[if (relExp(a * 10==b * c);) then ((print(a);print(b))) else (if (relExp(a * 10==10);) then ((print(100);print(200))) else (print(300))), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[if (relExp(a * 10==b * c);) then ((print(a);print(b))) else (if (relExp(a * 10==10);) then ((print(100);print(200))) else (print(300))), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(print(a);print(b)), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[(print(a);print(b)), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[print(a), print(b), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[print(a), print(b), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[print(b), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[1],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[print(b), print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[1],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[print(300)],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2, 300],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2, 300],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={a=1, b=2, c=5},
+ output=[1, 2, 300],
+ originalProgram=(Int a;(Int b;(Int c;(a = 1;(b = 2;(c = 5;(switch(a * 10) (case b * c: (print(a);print(b))) (case 10: (print(100);print(200))) (default: print(300));print(300)))))))),
+ fileTable={},
+ heap=(the heap is empty)
+,
+ semaphoreTable=(the semtable is empty)
+
+}

@@ -57,4 +57,19 @@ public class MySemaphore implements ISemaphore<Integer, Pair<Integer, List<Integ
   public Integer getFreeLocation() {
     return freeLocation.getAndIncrement();
   }
+
+  @Override
+  public synchronized String toString() {
+    if (this.semaphoreTable.isEmpty()) {
+      return "(the semtable is empty)\n";
+    }
+
+    StringBuilder s = new StringBuilder();
+    for (Integer key : this.semaphoreTable.keySet()) {
+      s.append(key.toString()).append(" -> ");
+      s.append(this.semaphoreTable.get(key).toString());
+      s.append("\n");
+    }
+    return s.toString();
+  }
 }
