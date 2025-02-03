@@ -288,6 +288,29 @@ public class ProgramListController {
 
     programs.add(swici);
 
+    IStmt forcccc = new ForkStmt(
+
+        new CompStmt(
+            new AcquireStmt("cnt"),
+            new CompStmt(
+                new WriteHeapStmt("v1",
+                    new ArithExp('*',
+
+                        new RefExp(
+                            new VariableExp("v1")),
+                        new ConstantValue(
+                            new IntValue(10)))),
+                new CompStmt(
+                    new PrintStmt(new RefExp(
+                        new VariableExp("v1"))),
+                    new ReleaseStmt("cnt"))
+
+            )
+
+        )
+
+    );
+
     IStmt sem = new CompStmt(
         new VarDeclStmt("v1", new RefType(new IntType())),
         new CompStmt(
@@ -298,28 +321,7 @@ public class ProgramListController {
 
                     new CreateSemaphoreStmt("cnt", new RefExp(new VariableExp("v1"))),
                     new CompStmt(
-                        new ForkStmt(
-
-                            new CompStmt(
-                                new AcquireStmt("cnt"),
-                                new CompStmt(
-                                    new WriteHeapStmt("v1",
-                                        new ArithExp('*',
-
-                                            new RefExp(
-                                                new VariableExp("v1")),
-                                            new ConstantValue(
-                                                new IntValue(10)))),
-                                    new CompStmt(
-                                        new PrintStmt(new RefExp(
-                                            new VariableExp("v1"))),
-                                        new ReleaseStmt("cnt"))
-
-                                )
-
-                            )
-
-                        ),
+                        forcccc,
 
                         new CompStmt(
                             new ForkStmt(
