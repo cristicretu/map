@@ -19,9 +19,9 @@ public class AcquireStmt implements IStmt {
   }
 
   @Override
-  public PrgState execute(PrgState state) throws MyException {
-    var symTable = state.getSymTable();
-    var semaphoreTable = state.getSemaphoreTable();
+  public PrgState execute(PrgState prg) throws MyException {
+    var symTable = prg.getSymTable();
+    var semaphoreTable = prg.getSemaphoreTable();
 
     try {
       if (!symTable.isDefined(var)) {
@@ -38,18 +38,19 @@ public class AcquireStmt implements IStmt {
         throw new MyException("Invalid semaphore index");
       }
 
+      // var semaphoreValue = semaphoreTable.get(foundIndex);
       Pair<Integer, List<Integer>> semaphoreValue = semaphoreTable.get(foundIndex);
       int N1 = semaphoreValue.getKey();
       List<Integer> List1 = semaphoreValue.getValue();
       int NL = List1.size();
 
       if (N1 > NL) {
-        if (!List1.contains(state.getId())) {
-          List1.add(state.getId());
+        if (!List1.contains(prg.getId())) {
+          List1.add(prg.getId());
           semaphoreTable.update(foundIndex, new Pair<>(N1, List1));
         }
       } else {
-        state.getExeStack().push(this);
+        prg.getExeStack().push(this);
       }
     } catch (DictionaryException e) {
       throw new MyException(e.getMessage());
