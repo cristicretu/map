@@ -22,6 +22,7 @@ import model.statement.WriteHeapStmt;
 import model.statement.ForkStmt;
 import model.statement.OpenRFile;
 import model.statement.ReadFile;
+import model.statement.SwitchStmt;
 import model.statement.CloseRFile;
 import model.statement.CreateSemaphoreStmt;
 import model.statement.AcquireStmt;
@@ -269,10 +270,13 @@ public class ProgramListController {
                                 new CompStmt(
                                     new WriteHeapStmt("v1",
                                         new ArithExp('*',
-                                            new RefExp(new VariableExp("v1")),
-                                            new ConstantValue(new IntValue(10)))),
+                                            new RefExp(
+                                                new VariableExp("v1")),
+                                            new ConstantValue(
+                                                new IntValue(10)))),
                                     new CompStmt(
-                                        new PrintStmt(new RefExp(new VariableExp("v1"))),
+                                        new PrintStmt(new RefExp(
+                                            new VariableExp("v1"))),
                                         new ReleaseStmt("cnt"))))),
                         new CompStmt(
                             new ForkStmt(
@@ -281,25 +285,74 @@ public class ProgramListController {
                                     new CompStmt(
                                         new WriteHeapStmt("v1",
                                             new ArithExp('*',
-                                                new RefExp(new VariableExp("v1")),
-                                                new ConstantValue(new IntValue(10)))),
+                                                new RefExp(
+                                                    new VariableExp(
+                                                        "v1")),
+                                                new ConstantValue(
+                                                    new IntValue(
+                                                        10)))),
                                         new CompStmt(
                                             new WriteHeapStmt("v1",
                                                 new ArithExp('*',
-                                                    new RefExp(new VariableExp("v1")),
-                                                    new ConstantValue(new IntValue(2)))),
+                                                    new RefExp(
+                                                        new VariableExp(
+                                                            "v1")),
+                                                    new ConstantValue(
+                                                        new IntValue(
+                                                            2)))),
                                             new CompStmt(
-                                                new PrintStmt(new RefExp(new VariableExp("v1"))),
-                                                new ReleaseStmt("cnt")))))),
+                                                new PrintStmt(
+                                                    new RefExp(
+                                                        new VariableExp(
+                                                            "v1"))),
+                                                new ReleaseStmt(
+                                                    "cnt")))))),
                             new CompStmt(
                                 new AcquireStmt("cnt"),
                                 new CompStmt(
                                     new PrintStmt(
                                         new ArithExp('-',
-                                            new RefExp(new VariableExp("v1")),
-                                            new ConstantValue(new IntValue(1)))),
+                                            new RefExp(
+                                                new VariableExp("v1")),
+                                            new ConstantValue(
+                                                new IntValue(1)))),
                                     new ReleaseStmt("cnt")))))))));
     programs.add(prog11);
+    // int a; int b; int c;
+    // a=1;b=2;c=5;
+    // (switch(a*10)
+    // (case (b*c) : print(a);print(b))
+    // (case (10) : print(100);print(200))
+    // (default : print(300)));
+    // print(300)
+
+    IStmt SwitchProg = new CompStmt(new VarDeclStmt("a", new IntType()),
+        new CompStmt(new VarDeclStmt("b", new IntType()),
+            new CompStmt(new VarDeclStmt("c", new IntType()),
+                new CompStmt(new AssignStmt("a", new ConstantValue(new IntValue(1))),
+                    new CompStmt(new AssignStmt("b", new ConstantValue(new IntValue(2))),
+                        new CompStmt(new AssignStmt("c", new ConstantValue(new IntValue(5))),
+                            new CompStmt(
+                                new SwitchStmt(
+                                    new ArithExp('*', new VariableExp("a"),
+                                        new ConstantValue(new IntValue(10))),
+                                    new ArithExp('*', new VariableExp("b"),
+                                        new VariableExp("c")),
+                                    new ConstantValue(new IntValue(10)),
+                                    new CompStmt(
+                                        new PrintStmt(new VariableExp("a")),
+                                        new PrintStmt(new VariableExp("b"))),
+                                    new CompStmt(
+                                        new PrintStmt(new ConstantValue(
+                                            new IntValue(100))),
+                                        new PrintStmt(new ConstantValue(
+                                            new IntValue(200)))),
+                                    new PrintStmt(
+                                        new ConstantValue(new IntValue(300)))),
+                                new PrintStmt(
+                                    new ConstantValue(new IntValue(300))))))))));
+
+    programs.add(SwitchProg);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
