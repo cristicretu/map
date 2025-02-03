@@ -143,6 +143,26 @@ public class MainWindowController {
         });
   }
 
+  private void populateSemaphoreTable() {
+    if (!controller.getRepo().getPrgList().isEmpty()) {
+      ISemaphore<Integer, Pair<Integer, List<Integer>>> semaphoreTable = controller.getRepo().getPrgList().get(0)
+          .getSemaphoreTable();
+      ObservableList<Map.Entry<Integer, Pair<Integer, List<Integer>>>> semaphoreEntries = FXCollections
+          .observableArrayList(
+              semaphoreTable.getContent().entrySet());
+      semaphoreTableView.setItems(semaphoreEntries);
+      this.semaphoreTableView.getItems()
+          .addListener((
+              javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, Pair<Integer, List<Integer>>>> change) -> {
+            while (change.next()) {
+              if (change.wasUpdated()) {
+                this.semaphoreTableView.refresh();
+              }
+            }
+          });
+    }
+  }
+
   private void populateOutput() {
     ObservableList<String> output = FXCollections.observableArrayList();
     if (!controller.getRepo().getPrgList().isEmpty()) {
@@ -245,26 +265,6 @@ public class MainWindowController {
             }
           }
         });
-  }
-
-  private void populateSemaphoreTable() {
-    if (!controller.getRepo().getPrgList().isEmpty()) {
-      ISemaphore<Integer, Pair<Integer, List<Integer>>> semaphoreTable = controller.getRepo().getPrgList().get(0)
-          .getSemaphoreTable();
-      ObservableList<Map.Entry<Integer, Pair<Integer, List<Integer>>>> semaphoreEntries = FXCollections
-          .observableArrayList(
-              semaphoreTable.getContent().entrySet());
-      semaphoreTableView.setItems(semaphoreEntries);
-      this.semaphoreTableView.getItems()
-          .addListener((
-              javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, Pair<Integer, List<Integer>>>> change) -> {
-            while (change.next()) {
-              if (change.wasUpdated()) {
-                this.semaphoreTableView.refresh();
-              }
-            }
-          });
-    }
   }
 
   @FXML
