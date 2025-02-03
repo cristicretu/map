@@ -247,7 +247,42 @@ public class ProgramListController {
                                 new VariableExp("a")))))))));
     programs.add(prog10);
 
-    // Example with semaphores
+    // int a; int b; int c;
+    // a=1;b=2;c=5;
+    // (switch(a*10)
+    // (case (b*c) : print(a);print(b))
+    // (case (10) : print(100);print(200))
+    // (default : print(300)));
+    // print(300)
+
+    IStmt swici = new CompStmt(new VarDeclStmt("a", new IntType()),
+        new CompStmt(new VarDeclStmt("b", new IntType()),
+            new CompStmt(new VarDeclStmt("c", new IntType()),
+                new CompStmt(new AssignStmt("a", new ConstantValue(new IntValue(1))),
+                    new CompStmt(new AssignStmt("b", new ConstantValue(new IntValue(2))),
+                        new CompStmt(new AssignStmt("c", new ConstantValue(new IntValue(5))),
+                            new CompStmt(
+                                new SwitchStmt(
+                                    new ArithExp('*', new VariableExp("a"),
+                                        new ConstantValue(new IntValue(10))),
+                                    new ArithExp('*', new VariableExp("b"),
+                                        new VariableExp("c")),
+                                    new ConstantValue(new IntValue(10)),
+                                    new CompStmt(
+                                        new PrintStmt(new VariableExp("a")),
+                                        new PrintStmt(new VariableExp("b"))),
+                                    new CompStmt(
+                                        new PrintStmt(new ConstantValue(
+                                            new IntValue(100))),
+                                        new PrintStmt(new ConstantValue(
+                                            new IntValue(200)))),
+                                    new PrintStmt(
+                                        new ConstantValue(new IntValue(300)))),
+                                new PrintStmt(
+                                    new ConstantValue(new IntValue(300))))))))));
+
+    programs.add(swici);
+
     // Ref int v1; int cnt;
     // new(v1,1);createSemaphore(cnt,rH(v1));
     // fork(acquire(cnt);wh(v1,rh(v1)*10));print(rh(v1));release(cnt));
@@ -318,41 +353,6 @@ public class ProgramListController {
                                                 new IntValue(1)))),
                                     new ReleaseStmt("cnt")))))))));
     programs.add(prog11);
-    // int a; int b; int c;
-    // a=1;b=2;c=5;
-    // (switch(a*10)
-    // (case (b*c) : print(a);print(b))
-    // (case (10) : print(100);print(200))
-    // (default : print(300)));
-    // print(300)
-
-    IStmt SwitchProg = new CompStmt(new VarDeclStmt("a", new IntType()),
-        new CompStmt(new VarDeclStmt("b", new IntType()),
-            new CompStmt(new VarDeclStmt("c", new IntType()),
-                new CompStmt(new AssignStmt("a", new ConstantValue(new IntValue(1))),
-                    new CompStmt(new AssignStmt("b", new ConstantValue(new IntValue(2))),
-                        new CompStmt(new AssignStmt("c", new ConstantValue(new IntValue(5))),
-                            new CompStmt(
-                                new SwitchStmt(
-                                    new ArithExp('*', new VariableExp("a"),
-                                        new ConstantValue(new IntValue(10))),
-                                    new ArithExp('*', new VariableExp("b"),
-                                        new VariableExp("c")),
-                                    new ConstantValue(new IntValue(10)),
-                                    new CompStmt(
-                                        new PrintStmt(new VariableExp("a")),
-                                        new PrintStmt(new VariableExp("b"))),
-                                    new CompStmt(
-                                        new PrintStmt(new ConstantValue(
-                                            new IntValue(100))),
-                                        new PrintStmt(new ConstantValue(
-                                            new IntValue(200)))),
-                                    new PrintStmt(
-                                        new ConstantValue(new IntValue(300)))),
-                                new PrintStmt(
-                                    new ConstantValue(new IntValue(300))))))))));
-
-    programs.add(SwitchProg);
 
     ObservableList<String> programStrings = FXCollections.observableArrayList();
     for (IStmt stmt : programs) {
@@ -390,7 +390,6 @@ public class ProgramListController {
       IRepository repo = new Repository(prgState, "log" + (index + 1) + ".txt");
       Controller controller = new Controller(repo);
 
-      // Create and show the main window
       FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainWindow.fxml"));
       Parent root = loader.load();
       MainWindowController mainWindowController = loader.getController();

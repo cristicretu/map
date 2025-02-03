@@ -73,4 +73,9 @@ public class RelExp implements IExp {
     }
   }
 
+  @Override
+  public String toString() {
+    return "relExp(" + exp1.toString() + operation + exp2.toString() + ");";
+  }
+
 }

@@ -133,7 +133,6 @@ public class MainWindowController {
         heap.getHeap().entrySet());
     heapTableView.setItems(heapEntries);
 
-    // Add a listener to refresh the heap table view whenever its items change
     this.heapTableView.getItems()
         .addListener((javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, IValue>> change) -> {
           while (change.next()) {
@@ -238,7 +237,6 @@ public class MainWindowController {
     }
     symTableView.setItems(symTableEntries);
 
-    // Add a listener to refresh the symbol table view whenever its items change
     this.symTableView.getItems()
         .addListener((javafx.collections.ListChangeListener.Change<? extends Map.Entry<String, IValue>> change) -> {
           while (change.next()) {
@@ -258,7 +256,6 @@ public class MainWindowController {
               semaphoreTable.getContent().entrySet());
       semaphoreTableView.setItems(semaphoreEntries);
 
-      // Add a listener to refresh the semaphore table view whenever its items change
       this.semaphoreTableView.getItems()
           .addListener((
               javafx.collections.ListChangeListener.Change<? extends Map.Entry<Integer, Pair<Integer, List<Integer>>>> change) -> {
@@ -285,7 +282,6 @@ public class MainWindowController {
     boolean programStateLeft = controller.executeOneStep();
     populateAll();
 
-    // Force refresh the views to show updated values
     this.symTableView.refresh();
     this.heapTableView.refresh();
     this.semaphoreTableView.refresh();
